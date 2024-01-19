@@ -18,8 +18,8 @@ sequenceDiagram
         DB->>S: Email unique confirmé
         S->>S: Hache le mot de passe
         S->>DB: Crée le nouvel utilisateur
-        s->>db: Création de la clé de confirmation de l'email
-        s->>UI: Envoie de la clé de confirmation par email à l'utilisateur
+        S->>DB: Création de la clé de confirmation de l'email
+        S->>U: Envoie de la clé de confirmation par email à l'utilisateur
         DB->>S: Confirmation de création de l'utilisateur
         S->>UI: Utilisateur créé avec succès
         UI->>U: Affiche succès de création de compte
