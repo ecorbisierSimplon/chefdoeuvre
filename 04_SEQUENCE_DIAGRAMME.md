@@ -37,7 +37,9 @@ sequenceDiagram
                 UI->>U: Affiche succès de l'activation de compte et que le mail est validée
             end
         else L'email n'est pas validée dans le délai impartit
-                S->>U: Envoie un mail de rappel à l'utilisateur
+                rect rgb(234 235 171)
+                    S->>U: Envoie un mail de rappel à l'utilisateur
+                end
             alt L'email est validé
                 rect rgb(134 229 146)
                     S->>DB: Indication que l'email est correct et le compte est activé
