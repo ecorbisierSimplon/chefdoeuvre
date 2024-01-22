@@ -7,7 +7,6 @@ sequenceDiagram
     participant S as Serveur
     participant DB as "Base de Données"
 
-    rect rgb(191, 223, 255)
     U->>UI: Choix de créer un compte
     UI->>S: Demande de création de compte avec email et mot de passe
     S->>DB: Vérifie si l'email existe déjà
