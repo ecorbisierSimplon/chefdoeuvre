@@ -47,7 +47,7 @@ sequenceDiagram
                 end
             else L'email n'est pas validé apès le temps impartit
                 rect rgb(201 134 134)
-                    S->>DB: Le compte est supprimé
+                    S->>DB: Le compte est désactivé
                 end
             end
         end
