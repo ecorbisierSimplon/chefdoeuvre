@@ -1,0 +1,89 @@
+section {
+  transition: slide-up fade 1s;
+  background-image: url("https://cda.corbisier.fr/layout/img/fond.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: hsl(211, 71%, 16%);
+  text-shadow: 0 0 4px hsl(21, 69%, 71%);
+  &::after {
+    font-family: "Amaranth", sans-serif;
+    font-weight: bold;
+    background-color: hsla(211, 40%, 66%, 0.5);
+    margin: 10px;
+    border-radius: 20px 10px;
+    box-shadow: 2px 2px 2px 2px #797979;
+  }
+  &.one {
+    background-image: url("https://cda.corbisier.fr/layout/img/fond_slide_1.jpg");
+    background-color: transparent;
+    header,
+    footer {
+      display: none;
+    }
+    h2 {
+      display: block;
+      margin-top: 50px;
+      text-align: center;
+    }
+
+    pre {
+      font-size: 1rem !important;
+      white-space: break-spaces;
+      padding: 20px 50px;
+    }
+  }
+  table {
+    tr,
+    td {
+      border-width: 0;
+    }
+  }
+}
+header,
+footer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: "Amaranth", sans-serif;
+  // width: 100vw;
+  strong {
+    color: hsl(211, 46%, 20%);
+    font-weight: 900;
+    font-size: 1.2rem;
+  }
+}
+
+header {
+  background-color: rgba(255, 255, 255, 0.678);
+  margin-bottom: 20px;
+  img {
+    margin-right: 20px;
+    height: 100%;
+  }
+}
+footer {
+  margin-top: 20px;
+}
+h1 {
+  color: hsl(211, 46%, 20%);
+  font-weight: bold;
+}
+
+@keyframes marp-outgoing-transition-slide-up {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+@keyframes marp-incoming-transition-slide-up {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}

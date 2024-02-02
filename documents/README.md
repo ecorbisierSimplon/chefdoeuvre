@@ -1,14 +1,14 @@
 ﻿# **CHEF D'OEUVRE**
 
-## Application de planification pour personne souffrant d'un trouble de l'attention ou d'oublie
+## **Tranquillo Organizer App**
 
-# **Tranquillo Organizer App**
+### Description
 
-## Description
+#### **Application de planification pour personne souffrant d'un trouble de l'attention ou d'oublie.**
 
 L'application **Tranquillo Organizer App** est spécialement conçue pour répondre aux besoins des personnes ayant un Trouble Déficitaire de l'Attention avec Hyperactivité (TDAH) et des personnes avec un Trouble du Spectre Autistique (TSA). Elle offre une approche innovante de la planification, favorisant une expérience personnalisée et adaptative.
 
-## Fonctionnalités Principales
+### Fonctionnalités Principales
 
 - **Interface Intuitive :** Une interface utilisateur simple et minimale pour réduire les distractions, assurant une expérience de planification sans stress.
 
@@ -28,7 +28,7 @@ L'application **Tranquillo Organizer App** est spécialement conçue pour répon
 
 - **Mode Nuit Apaisant :** Optez pour un mode nuit ou une interface apaisante, idéale pour des moments de calme.
 
-## Prérequis
+### Prérequis
 
 - [Liste des prérequis et dépendances]
 
@@ -38,27 +38,27 @@ L'application **Tranquillo Organizer App** est spécialement conçue pour répon
 2. Allez dans le répertoire du projet : `cd tdah-planner`
 3. Installez les dépendances : [commande d'installation des dépendances]
 
-## Configuration
+### Configuration
 
 1. Configurez [insérer les configurations nécessaires]
 2. Ajoutez vos clés API si nécessaire.
 
-## Utilisation
+### Utilisation
 
 1. Lancez l'application : [commande de lancement]
 2. Créez un compte utilisateur ou connectez-vous.
 3. Accédez à la section de planification.
 4. Créez vos rappels en spécifiant les détails, y compris les délais, la géolocalisation et les horaires.
 
-## Contribuer
+### Contribuer
 
 Nous accueillons les contributions sous forme de pull requests. Assurez-vous de consulter notre guide de contribution pour plus d'informations.
 
-## Problèmes Connus
+### Problèmes Connus
 
 [Liste des problèmes connus, le cas échéant]
 
-## Licence
+### Licence
 
 Ce projet est sous licence [insérer la licence]. Consultez le fichier LICENSE pour plus de détails.
 
