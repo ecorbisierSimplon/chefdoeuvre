@@ -1,0 +1,29 @@
+@use "sass:color";
+@use "sass:math";
+
+$color-light: #fff8e1;
+$color-dark: hsl(211, 18%, 33%);
+$color-primary: hsl(211, 100%, 41%);
+$color-secondary: #81d4fa;
+
+@import url("https://fonts.bunny.net/css?family=Lato:400,900|amaranth:400,400i,700,700i|azeret-mono:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Roboto+Mono:400,700&display=swap");
+
+@mixin color-scheme($bg, $text, $highlight) {
+  --color-background: #{$bg};
+  --color-background-stripe: #{rgba($text, 0.1)};
+  --color-foreground: #{$text};
+  --color-dimmed: #{color.mix($text, $bg, 80%)};
+  --color-highlight: #{$highlight};
+}
+
+$pid: 200px;
+$pid_marg: 10px;
+$pid_bottom: 20px;
+$pid_top: calc(100% - calc($pid + calc($pid_bottom * 2)));
+$pid_right: 200px;
+$pid_duration: 2s;
+$pid_delay: 1s;
+$pid_duration_1: 3s;
+$pid_delay_1: $pid_delay + $pid_duration;
+$pid_duration_2: 2s;
+$pid_delay_2: $pid_delay_1 + $pid_duration_1;

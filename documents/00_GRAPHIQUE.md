@@ -1,5 +1,7 @@
 ## Chartre graphique
 
+- **Palette de Bleues Apaisants :**
+
 | Nom        | code couleur                                                                |
 | ---------- | --------------------------------------------------------------------------- |
 | Bleu Clair | <span style="background-color: #6FA3EF; padding: 5px 10px;" >#6FA3EF</span> |

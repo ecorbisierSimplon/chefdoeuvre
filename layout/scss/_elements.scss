@@ -1,10 +1,12 @@
+@use "sass:math";
+
 section {
   transition: slide-up fade 1s;
   background-image: url("https://cda.corbisier.fr/layout/img/fond.webp");
   background-repeat: no-repeat;
   background-size: cover;
   color: hsl(211, 71%, 16%);
-  text-shadow: 0 0 4px hsl(21, 69%, 71%);
+
   &::after {
     font-family: "Amaranth", sans-serif;
     font-weight: bold;
@@ -13,13 +15,62 @@ section {
     border-radius: 20px 10px;
     box-shadow: 2px 2px 2px 2px #797979;
   }
+
+  ol,
+  ul {
+    & > li {
+      font-family: "Amaranth", sans-serif;
+      font-weight: bold;
+      font-size: 0.9rem;
+      text-shadow: 2px 2px 5px hsl(24, 7%, 29%);
+      // animation-duration: 3s;
+      // animation-name: slidein;
+
+      & ul {
+        // list-style-type: "";
+        list-style-position: outside;
+        margin-top: -10px;
+
+        & > li {
+          font-weight: 400;
+          font-size: 0.7rem;
+          &::before {
+            margin-right: 10px;
+            content: " ";
+          }
+          &::marker {
+            display: inline-block;
+            font: normal normal normal 14px/1 FontAwesome;
+            font-size: inherit;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+            content: "\f017";
+            color: hsl(0, 100%, 9%);
+            margin-right: 15px;
+          }
+        }
+      }
+    }
+  }
+
+  ol,
+  ul {
+    margin: 0px;
+  }
+
   &.one {
     background-image: url("https://cda.corbisier.fr/layout/img/fond_slide_1.jpg");
     background-color: transparent;
+
     header,
     footer {
       display: none;
     }
+
+    h1 {
+      font-size: 1.8rem;
+    }
+
     h2 {
       display: block;
       margin-top: 50px;
@@ -32,13 +83,39 @@ section {
       padding: 20px 50px;
     }
   }
+
+  &.pid {
+    table {
+      max-width: calc(100% - $pid);
+    }
+
+    img:not(header img) {
+      position: absolute;
+      width: 0;
+      top: -10px;
+      right: -10px;
+      animation: pid_slideIn $pid_duration cubic-bezier(0.1, -0.6, 0.9, 0)
+          $pid_delay forwards,
+        bounce $pid_duration_1 ease-in-out $pid_delay_1,
+        linear_left $pid_duration_1 ease-out $pid_delay_1,
+        linear_right $pid_duration_2 ease-out $pid_delay_2;
+    }
+
+    td:first-child {
+      width: $pid;
+    }
+  }
+
   table {
     tr,
     td {
       border-width: 0;
     }
   }
+  &.graphic_chart {
+  }
 }
+
 header,
 footer {
   display: flex;
@@ -47,6 +124,7 @@ footer {
   justify-content: flex-start;
   align-items: center;
   font-family: "Amaranth", sans-serif;
+
   // width: 100vw;
   strong {
     color: hsl(211, 46%, 20%);
@@ -58,32 +136,149 @@ footer {
 header {
   background-color: rgba(255, 255, 255, 0.678);
   margin-bottom: 20px;
+
   img {
     margin-right: 20px;
     height: 100%;
   }
 }
+
 footer {
   margin-top: 20px;
 }
+
 h1 {
-  color: hsl(211, 46%, 20%);
+  color: hsl(211, 51%, 18%);
+  background-color: #9facb6;
+  font-size: 1.4rem;
   font-weight: bold;
+  padding: 0 10px 10px 10px;
+  width: fit-content;
+  text-wrap: nowrap;
+  text-shadow: 0.5px 0.5px 0.5px #919191, 0.5px 1px 0.5px #919191,
+    0.5px 1.5px 0.5px #919191, 0.5px 2px 0.5px #919191,
+    0.5px 2.5px 0.5px #919191, 0.5px 3px 0.5px #919191,
+    0.5px 3.5px 0.5px #919191, 0.5px 4px 0.5px #919191,
+    0.5px 4.5px 0.5px #919191, 0.5px 5px 0.5px #919191,
+    0.5px 9px 3px rgba(16, 16, 16, 0.4), 0.5px 11px 5px rgba(16, 16, 16, 0.2),
+    0.5px 12.5px 17.5px rgba(16, 16, 16, 0.2),
+    0.5px 15px 30px rgba(16, 16, 16, 0.4);
+  //  border-radius: 20px;
+  // border: 5px solid #e6e6e6;
+  box-shadow: 2px 2px 5px 2px #696969, 0 30px 20px -10px rgba(0, 0, 0, 0.2);
 }
 
-@keyframes marp-outgoing-transition-slide-up {
+@mixin marp-swoosh-animation($startX, $startY, $endX, $endY) {
   from {
-    transform: translateX(100%);
+    transform: translate($startX, $startY) scale(0) perspective(100vw)
+      translate3d(
+        calc(var(--marp-transition-direction, 1) * $endX),
+        calc(var(--marp-transition-direction, 1) * $endY),
+        -100vw
+      )
+      rotateX(90deg) rotateZ(90deg);
   }
+
   to {
-    transform: translateX(0%);
+    transform: translate(0, 0) scale(1) perspective(100vw);
   }
 }
-@keyframes marp-incoming-transition-slide-up {
+
+@keyframes marp-incoming-transition-swoosh {
+  @include marp-swoosh-animation(-10vw, 0, 100vw, -100vh);
+}
+
+@keyframes marp-outgoing-transition-swoosh {
   from {
-    transform: translateX(-100%);
+    transform: translate(0, 0) scale(1) perspective(100vw);
   }
+
   to {
-    transform: translateX(0%);
+    transform: translate(-10vw, 0) scale(0) perspective(100vw)
+      translate3d(
+        calc(var(--marp-transition-direction, 1) * 100%),
+        -100vh,
+        -100vw
+      )
+      rotateX(00deg) rotateZ(00deg);
+  }
+}
+
+@keyframes pid_slideIn {
+  0% {
+    width: 0px;
+    top: -10px;
+    right: -10px;
+  }
+
+  100% {
+    width: $pid;
+    top: $pid_top;
+    right: $pid_right;
+  }
+}
+
+@keyframes bounce {
+  @for $i from 0 through 10 {
+    $percentage: calc($i * 10%);
+
+    #{$percentage} {
+      top: $pid_top;
+    }
+  }
+
+  @for $i from 1 through 10 {
+    $percent: $i * 10%;
+    $pixel: 250px;
+
+    $result: (((($pixel * -1) +1) / 9 * ($i - 1)) + $pixel);
+
+    #{$percent - 5%} {
+      top: calc($pid_top - $result);
+    }
+  }
+}
+
+@keyframes linear_left {
+  0% {
+    right: $pid_right;
+  }
+
+  100% {
+    $end: $pid_right + 300px;
+    right: $end;
+  }
+}
+
+@keyframes linear_right {
+  0% {
+    right: $pid_right + 300px;
+  }
+
+  100% {
+    $end: $pid_right;
+    right: $end;
+  }
+}
+
+@keyframes li_up {
+  from {
+    transform: translateY(0%);
+  }
+
+  to {
+    transform: translateY(100%);
+  }
+}
+
+@keyframes slidein {
+  from {
+    margin-top: 100%;
+    height: 1000%;
+  }
+
+  to {
+    margin-top: 0%;
+    height: 100%;
   }
 }

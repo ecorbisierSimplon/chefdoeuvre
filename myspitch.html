@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link rel="preconnect" href="https://fonts.bunny.net" />
+    <link
+      href="https://fonts.bunny.net/css?family=amaranth:400,400i,700,700i"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: hsl(235, 11%, 23%);
+        color: aliceblue;
+        font-family: "Amaranth", sans-serif;
+        font-size: 1.3rem;
+        text-shadow: 2px 2px 2px rgb(56, 56, 56);
+      }
+      .w3-container {
+        border: 10px solid #8a8a8a;
+        border-radius: 20px;
+      }
+      .w3-container h3 {
+        text-align: center;
+        font-weight: bold;
+        font-family: "Amaranth", sans-serif;
+        font-size: 1.8rem;
+        color: #f5f5f5;
+        text-shadow: 0.5px 0.5px 0.5px #919191, 0.5px 1px 0.5px #919191,
+          0.5px 1.5px 0.5px #919191, 0.5px 2px 0.5px #919191,
+          0.5px 2.5px 0.5px #919191, 0.5px 3px 0.5px #919191,
+          0.5px 3.5px 0.5px #919191, 0.5px 4px 0.5px #919191,
+          0.5px 4.5px 0.5px #919191, 0.5px 5px 0.5px #919191,
+          0.5px 9px 3px rgba(16, 16, 16, 0.4),
+          0.5px 11px 5px rgba(16, 16, 16, 0.2),
+          0.5px 12.5px 17.5px rgba(16, 16, 16, 0.2),
+          0.5px 15px 30px rgba(16, 16, 16, 0.4);
+      }
+
+      .colums {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: nowrap;
+        align-items: flex-start;
+      }
+      .colums > div {
+        width: 49vw;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        margin: 20px;
+      }
+      .colums > div:first-child {
+        background-color: #c3c3c336;
+        padding: 0px 15px 5px 5px;
+        border-radius: 5px;
+        box-shadow: 3px 3px 8px 1px #080808c7;
+      }
+      .colums > div span {
+        margin: 10px 0px;
+        text-indent: 30px;
+        text-align: justify;
+        hyphens: auto;
+      }
+      @media screen and (max-width: 600px) {
+        .colums {
+          flex-direction: column;
+        }
+        .colums > div {
+          width: calc(100vw - 80px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="w3-container">
+      <h3><i>Slide 1 - </i>Presentation</h3>
+      <div class="colums">
+        <div>
+          <span> Ladies and gentlemen, </span>
+          <span>
+            Thank you for welcoming me to introduce my masterpiece, the
+            Tranquillo Organizer App, before you today.
+          </span>
+        </div>
+        <div>
+          <span> Mesdames et Messieurs, </span>
+          <span>
+            Je vous remercie de m'accueillir pour vous présenter mon
+            chef-d'œuvre, l'application Tranquillo Organizer.
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <div class="w3-container">
+      <h3><i>Slide 2 - </i>Who am I, you ask?</h3>
+      <div class="colums">
+        <div>
+          <span>
+            Allow me, first of all, to introduce myself - I'm Eric Corbisier.
+          </span>
+          <span>
+            My age, let's just say, is a number that no longer rolls off the
+            tongue effortlessly.
+          </span>
+          <span>
+            Over the years, I've worn many hats, starting out as a letter
+            carrier, then navigating the field of technical assistance for alarm
+            systems, before finally finding my calling as an electrical safety
+            training instructor.
+          </span>
+          <span>
+            When I'm not immersed in my professional activities, you'll find me
+            reveling in the joy of hands-on projects and cycling adventures.
+          </span>
+          <span>
+            However, my heart belongs to the world of codes and pixels.
+          </span>
+          <span>
+            I'm a fervent enthusiast of all things IT, with a particular
+            predilection for web development.
+          </span>
+          <span>
+            In short, I'm a mix of diverse experiences, an avid tinkerer, a keen
+            cyclist and an unconditional lover of the intricate dance between
+            lines of code on the vast canvas that is the web.
+          </span>
+        </div>
+        <div>
+          <span>
+            Permettez-moi, avant out, de me présenter - je suis Eric Corbisier.
+          </span>
+          <span>
+            Mon âge, disons que c'est un chiffre qui ne roule plus sur la langue
+            sans effort.
+          </span>
+          <span>
+            Au fil des ans, j'ai porté plusieurs chapeaux, en commençant comme
+            facteur, puis en naviguant dans le domaine de l'assistance technique
+            aux systèmes d'alarme, pour finalement trouver ma voie en tant
+            qu'instructeur de formation en sécurité électrique.
+          </span>
+          <span>
+            Lorsque je ne suis pas plongé dans mes activités professionnelles,
+            vous me trouverez en train de me délecter de la joie des projets
+            pratiques et des aventures à vélo.
+          </span>
+          <span>
+            Cependant, mon cœur appartient au monde des codes et des pixels.
+          </span>
+          <span>
+            Je suis un fervent passionné de tout ce qui touche à l'informatique,
+            avec une prédilection particulière pour le développement web.
+          </span>
+          <span>
+            En résumé, je suis un mélange d'expériences diverses, un fervent
+            bricoleur, un passionné de cyclisme et un amoureux inconditionnel de
+            la danse complexe entre les lignes de code sur la vaste toile qu'est
+            le web.
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <div class="w3-container">
+      <h3><i>Slide 3 - </i> is Tranquillo Organizer App ?</h3>
+      <div class="colums">
+        <div>
+          <span
+            >I'm thrilled to introduce the Tranquillo Organizer App, a
+            revolutionary tool designed specifically for individuals with
+            Attention Deficit Hyperactivity Disorder (ADHD) and Autism Spectrum
+            Disorder (ASD).
+          </span>
+          <span
+            >Our app offers a personalized and adaptive planning experience,
+            addressing the unique needs of these users. Unlike traditional
+            organizers, Tranquillo goes beyond scheduling; it becomes a
+            supportive companion, understanding and adapting to the user's
+            preferences.
+          </span>
+          <span
+            >Through an intuitive interface, it helps create structured
+            routines, fostering a sense of calm and control essential for
+            individuals with ADHD and ASD.
+          </span>
+          <span
+            >Our app's innovation lies in its adaptability, ensuring a dynamic
+            user experience that evolves with changing needs. Tranquillo
+            Organizer App is not just a planner; it's a pathway to a more
+            organized, empowered life for those navigating the challenges of
+            ADHD and ASD. Thank you for your time, and I'm happy to address any
+            questions you may have.
+          </span>
+        </div>
+        <div>
+          <span>
+            Je suis ravi de vous présenter l'application Tranquillo Organizer,
+            un outil révolutionnaire conçu spécifiquement pour les personnes
+            souffrant de troubles du déficit de l'attention avec hyperactivité
+            (TDAH) et de troubles du spectre autistique (TSA).
+          </span>
+          <span>
+            Notre application offre une expérience de planification
+            personnalisée et adaptative, répondant aux besoins uniques de ces
+            utilisateurs. Contrairement aux organisateurs traditionnels,
+            Tranquillo va au-delà de la planification ; il devient un compagnon
+            de soutien, qui comprend et s'adapte aux préférences de
+            l'utilisateur.
+          </span>
+          <span>
+            Grâce à une interface intuitive, il aide à créer des routines
+            structurées, favorisant un sentiment de calme et de contrôle
+            essentiel pour les personnes atteintes de TDAH et de TSA.
+          </span>
+          <span>
+            L'innovation de notre application réside dans sa capacité
+            d'adaptation, garantissant une expérience utilisateur dynamique qui
+            évolue en fonction des besoins. L'application Tranquillo Organizer
+            n'est pas seulement un agenda ; c'est un chemin vers une vie mieux
+            organisée et plus autonome pour ceux qui font face aux défis du TDAH
+            et des TSA.
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <div class="w3-container">
+      <h3><i>Slide 4 - </i>Key Features</h3>
+      <div class="colums">
+        <div>
+          <span>
+            The app provides a stress-free planning experience with a
+            user-friendly and minimal interface.
+          </span>
+          <span>
+            You can customize the app by choosing your own colors, fonts, and
+            accessibility settings.
+          </span>
+          <span>
+            Visual and auditory alerts adapt to your individual preferences, and
+            reminders are flexible with custom repeat options to fit your
+            busiest days.
+          </span>
+        </div>
+        <div>
+          <span>
+            L'application offre une expérience de planification sans stress
+            grâce à une interface conviviale et minimale.
+          </span>
+          <span>
+            Vous pouvez personnaliser l'application en choisissant vos propres
+            couleurs, polices, et paramètres d'accessibilité.
+          </span>
+          <span>
+            Les alertes visuelles et sonores s'adaptent à vos préférences
+            individuelles, et les rappels sont flexibles avec des options de
+            répétition personnalisées pour convenir à vos journées les plus
+            chargées.
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <div class="w3-container">
+      <h3><i>Slide 5 - </i>Key Features</h3>
+      <div class="colums">
+        <div>
+          <span>
+            The pause function allows you to temporarily halt reminders,
+            offering optimal flexibility.
+          </span>
+          <span>
+            A visual display of time remaining simplifies deadline management,
+            while integrating reminders into your daily routine creates specific
+            alerts for key moments of the day.
+          </span>
+          <span>
+            A tracking journal records your experiences, enabling personalized
+            adjustments.
+          </span>
+          <span>
+            Additionally, you have the option to choose a soothing night mode
+            for moments of calm and relaxation.
+          </span>
+        </div>
+        <div>
+          <span>
+            La fonction de pause vous permet de mettre en pause les rappels
+            lorsque nécessaire, offrant une flexibilité optimale.
+          </span>
+          <span>
+            L'affichage visuel du temps restant facilite la gestion des délais,
+            tandis que l'intégration des rappels à votre routine quotidienne
+            crée des alertes spécifiques pour les moments clés de la journée.
+          </span>
+          <span>
+            Un journal de suivi enregistre vos expériences, permettant des
+            ajustements personnalisés.
+          </span>
+          <span>
+            De plus, vous avez la possibilité d'opter pour un mode nuit apaisant
+            pour des moments de calme et de détente.
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <div class="w3-container">
+      <h3><i>Slide - </i></h3>
+      <div class="colums">
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+
+    <div class="w3-container">
+      <h3><i>Slide - </i></h3>
+      <div class="colums">
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+
+    <!-- <div class="w3-container">
+      <h3><i>Slide  - </i> </h3>
+      <div class="colums">
+        <div>
+
+            
+        </div>
+        <div>
+ 
+            
+        </div>
+      </div>
+    </div> -->
+  </body>
+</html>
