@@ -22,6 +22,7 @@ Planning application for individuals experiencing attention or memory issues.
 
 <!--# note:
 Ladies and gentlemen,
+
 Thank you for welcoming me to introduce my masterpiece, the Tranquillo Organizer App, before you today.
 -->
 
@@ -43,95 +44,108 @@ Thank you for welcoming me to introduce my masterpiece, the Tranquillo Organizer
 | **Passion**       | :   | Web Development                                               |
 
 <!--# note:
-Allow me, first of all, to introduce myself – I am Eric Corbisier. My age, well, let's just say it's a number that no longer rolls off the tongue effortlessly. Over the years, I've worn various hats, starting as a postman, then navigating the realm of alarm system technical support, and eventually finding my stride as an electrical safety training instructor.
 
-When I'm not immersed in my professional endeavors, you'll find me reveling in the joy of hands-on projects and cycling adventures. Yet, my heart belongs to the world of codes and pixels. I am fervently passionate about all things related to computer wizardry, with a particular fondness for web development. In essence – a concoction of diverse experiences, a fervent DIY enthusiast, a cycling aficionado, and an unabashed lover of the intricate dance between lines of code on the vast canvas of the web. -->
+Allow me, first of all, to introduce myself - I'm Eric Corbisier.
+
+My age, let's just say, is a number that no longer rolls off the tongue effortlessly.
+
+Over the years, I've worked as a postman, then as an alarm technician, then as an electrical safety trainer.
+
+I love DIY and cycling adventures.
+
+I'm passionate about all things IT, especially web development.
+
+-->
 
 ---
 
 # What is **Tranquillo Organizer App**?
 
-<!-- prettier-ignore -->
-1) Tailored for ADHD and ASD:
+1. Tailored for ADHD and ASD:
 
-    - Tranquillo Organizer is designed for individuals with ADHD or ASD, addressing their unique daily organization challenges.
+   - Tranquillo Organizer is designed for individuals with ADHD or ASD, addressing their unique daily organization challenges.
 
-2) Personalized Planning Experience:
+2. Personalized Planning Experience:
 
-    - The app goes beyond traditional organizers, offering a personalized and adaptive planning experience.
+   - The app goes beyond traditional organizers, offering a personalized and adaptive planning experience.
 
-3) Promotes Calm and Control:
+3. Promotes Calm and Control:
 
-    - Tranquillo fosters calm and control by helping users create structured routines, vital for those with ADHD and ASD.
+   - Tranquillo fosters calm and control by helping users create structured routines, vital for those with ADHD and ASD.
 
-4) Innovative Adaptability:
+4. Innovative Adaptability:
 
-    - The app innovatively adapts to evolving user needs, serving as a pathway to a more organized and fulfilling life.
-  Feel free to use this shortened version to convey the main points of your presentation efficiently.
+   - The app innovatively adapts to evolving user needs, serving as a pathway to a more organized and fulfilling life.
+     Feel free to use this shortened version to convey the main points of your presentation efficiently.
 
 <!--# Notes:
 
-I'm thrilled to introduce the Tranquillo Organizer App, a groundbreaking solution specifically designed for anyone dealing with challenges related to daily organization, such as Attention Deficit Hyperactivity Disorder (ADHD) or Autism Spectrum Disorder (ASD). Our app offers a personalized and adaptive planning experience, addressing the unique needs of these users.
+Let's talk about the app.
 
-Unlike traditional organizers, Tranquillo goes beyond mere scheduling; it becomes a supportive companion, understanding and adapting to the user's preferences. Through an intuitive interface, it helps create structured routines, fostering a sense of calm and control essential for individuals with ADHD and ASD.
+Tranquillo Organizer is ideal for those looking to tackle the challenges of daily organization, especially for those with ADHD or ASD.
 
-The innovation of our app lies in its adaptability, ensuring a dynamic user experience that evolves with changing needs. Tranquillo Organizer is not just a planner; it's a pathway to a more organized and fulfilling life for those facing the challenges of ADHD or ASD. -->
+ The app offers personalized, adaptable planning, acting as a supportive companion that understands and adapts to the user's preferences.
 
----
+With its intuitive interface, Tranquillo facilitates the creation of structured routines, promoting calm and control for a better organized life.
 
-# Key Features
-
-<!-- prettier-ignore -->
-* Intuitive Interface:
-  - A simple and minimal user interface to minimize distractions, ensuring a stress-free planning experience.
-
-* Advanced Customization:
-  - Choose your colors, fonts, and accessibility settings to tailor the app to your individual preferences.
-
-* Adaptive Alerts:
-  - Varied visual and auditory alerts for a personalized experience, catering to individual user preferences.
-
-* Flexible Reminders:
-  - Create flexible reminders with custom repeat options to adapt to your busiest days.
-
-<!--# Notes :
-
-The app provides a stress-free planning experience with a user-friendly and minimal interface.
-
-You can customize the app by choosing your own colors, fonts, and accessibility settings.
-
-Visual and auditory alerts adapt to your individual preferences, and reminders are flexible with custom repeat options to fit your busiest days.
 -->
 
 ---
 
 # Key Features
 
-<!-- prettier-ignore -->
-* Pause Functionality:  
+- Intuitive Interface:
+
+  - A simple and minimal user interface to minimize distractions, ensuring a stress-free planning experience.
+
+- Advanced Customization:
+
+  - Choose your colors, fonts, and accessibility settings to tailor the app to your individual preferences.
+
+- Adaptive Alerts:
+
+  - Varied visual and auditory alerts for a personalized experience, catering to individual user preferences.
+
+- Flexible Reminders:
+  - Create flexible reminders with custom repeat options to adapt to your busiest days.
+
+<!--# Notes :
+
+You can customize the app by choosing your own colors, fonts, and accessibility settings.
+
+Visual and auditory alerts adapt to your individual preferences, and reminders are flexible with custom repeat options to fit your busiest days.
+
+-->
+
+---
+
+# Key Features
+
+- Pause Functionality:
+
   - Pause reminders when you need to redirect your energy elsewhere, and resume them when you're ready.
 
-* Visual Display of Time Remaining:
+- Visual Display of Time Remaining:
+
   - Clearly visualize the time remaining for deadlines with an intuitive display.
 
-* Daily Routine Integration:
+- Daily Routine Integration:
+
   - Link reminders to your daily routine, creating specific alerts for key moments in your day.
 
-* Tracking Journal:
+- Tracking Journal:
+
   - Record your experiences and adjust settings based on your specific needs with our tracking journal feature.
 
-* Soothing Night Mode:
+- Soothing Night Mode:
   - Opt for a night mode or a calming interface, perfect for moments of tranquility.
 
 <!--# Notes :
 
-The pause function allows you to temporarily halt reminders, offering optimal flexibility.
+The pause function allows you to temporarily interrupt reminders.
 
-A visual display of time remaining simplifies deadline management, while integrating reminders into your daily routine creates specific alerts for key moments of the day.
+There's a visual display of time remaining, as well as the integration of reminders of our daily routine through specific alerts.
 
-A tracking journal records your experiences, enabling personalized adjustments.
-
-Additionally, you have the option to choose a soothing night mode for moments of calm and relaxation.
 -->
 
 ---
@@ -190,6 +204,12 @@ Additionally, you have the option to choose a soothing night mode for moments of
 </div>
 </div>
 
+<!--# Notes :
+
+The application will have multiple visual styles that the user can customize.
+
+ -->
+
 ---
 
 <!-- _class: graphic_chart -->
@@ -214,7 +234,7 @@ Additionally, you have the option to choose a soothing night mode for moments of
 
 <!-- _class: entities -->
 
-# Entity Definitions
+# Entities Definitions
 
 <div>
 <div>
@@ -247,8 +267,7 @@ Additionally, you have the option to choose a soothing night mode for moments of
 
 <!--# NOTES:
 
-Our User table stores essential information about the user, such as a unique identifier, identity, e-mail address, password and role.
-It also tracks e-mail validation status, login preferences.
+Our User table stores essential information about the user.
 
 -->
 
@@ -256,7 +275,7 @@ It also tracks e-mail validation status, login preferences.
 
 <!-- _class: entities -->
 
-# Entity Definitions
+# Entities Definitions
 
 <div>
 <div>
@@ -306,7 +325,7 @@ This table manages unique keys for actions such as password reset or e-mail vali
 
 <!-- _class: entities -->
 
-# Entity Definitions
+# Entities Definitions
 
 <div>
 <div>
@@ -354,7 +373,7 @@ It forms the basis of the application.
 
 <!-- _class: entities -->
 
-# Entity Definitions
+# Entities Definitions
 
 <div>
 <div>
@@ -402,7 +421,7 @@ We also find the Adress table stores user-associated addresses, including detail
 
 <!-- _class: entities -->
 
-# Entity Definitions
+# Entities Definitions
 
 <div>
 <div>
@@ -436,10 +455,8 @@ We also find the Adress table stores user-associated addresses, including detail
 </div>
 
 <!--# Notes:
-Our category table defines task categories with names, descriptions
-a name and description, as well as options such as color, icon and audio preference.
 
-The colors, icons and audios tables are optional, making the application more pleasant to use.
+There is also a table for category table and the colors, icons and audios tables are optional, making the application more pleasant to use.
 
  -->
 
@@ -447,7 +464,7 @@ The colors, icons and audios tables are optional, making the application more pl
 
 <!-- _class: entities -->
 
-# Entity Definitions
+# Entities Definitions
 
 <div>
 <div>
@@ -486,13 +503,40 @@ The colors, icons and audios tables are optional, making the application more pl
 
 ![image](https://cda.corbisier.fr/layout/img/ergiagram.svg)
 
+<!--# Notes :
+
+The database encourages interaction between entities.
+Let's look at the diagram.
+We have a simplified diagram.
+
+-->
+
 ---
 
-<!-- _class: header__no two-->
+<!-- _class: header__no -->
+
+# Diagram tables
+
+![image](https://cda.corbisier.fr/layout/img/ergiagram_mini.svg)
+
+<!--# Notes :
+
+For example, a user creates a task in the task_list table.
+When he creates reminders, these are recorded in the repeat table, which is linked to both the task_list table and the user table.
+
+Roles (table roles) assigned to each user enable access rights to be defined, thus guaranteeing appropriate security of the security system.
+
+Keys (key_unique) are used to securely manage sensitive operations such as password changes, and are linked to the `user` table.
+
+-->
+
+---
+
+<!-- _class: img_two-->
 
 # User
 
-![image](https://cda.corbisier.fr/layout/img/sequence_user.svg)
+![image](https://cda.corbisier.fr/layout/img/sequence_user_1.svg)
 
 <!--# Notes:
 
@@ -502,6 +546,18 @@ The user decides to create an account, initiating the process through the user i
 2. Email Existence Check
 The server checks if the provided email already exists, preventing duplicate accounts.
 
+-->
+
+---
+
+<!-- _class: img_two-->
+
+# User
+
+![image](https://cda.corbisier.fr/layout/img/sequence_user_2.svg)
+
+<!--# Notes:
+
 3. Unique Email Confirmation
 Upon confirming the email is unique, the server securely creates a new account, hashes the password, generates a confirmation key, and notifies the user.
 
@@ -509,13 +565,13 @@ Upon confirming the email is unique, the server securely creates a new account, 
 
 ---
 
-<!-- _class: header__no three-->
+<!-- _class: img_two-->
 
 # User
 
-![image](https://cda.corbisier.fr/layout/img/sequence_user.svg)
+![image](https://cda.corbisier.fr/layout/img/sequence_user_3.svg)
 
-<!--# Notes:
+<!--# Notes :
 
 4. Email Validation
 The system validates the user's email, notifying the user of successful account activation and instructing them to await further instructions.
@@ -529,7 +585,7 @@ The system checks if the user validated their email after the reminder, handling
 7. Final Consequences
 Depending on email validation within the specified timeframe, the account remains active or is marked as inactive if validation doesn't occur.
 
--->
+ -->
 
 ---
 

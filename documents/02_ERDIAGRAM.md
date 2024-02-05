@@ -1,32 +1,37 @@
 ```mermaid
 erDiagram
 
-user ||--o{ key_cookies : "generates"
-user ||--o{ key_unique : "generates"
-user ||--o{ task_list : "creates"
-user }|..|{ roles : "has"
-user }|..|{ color : "chooses"
-user }|..|{ icons : "chooses"
-user }|..|{ audio : "chooses"
-key_cookies ||--o| user : "belongs to"
 key_unique ||--o| user : "belongs to"
+
 task_list ||--o| user : "belongs to"
 task_list ||--o| adress : "has"
 task_list ||--o| category : "has"
 task_list ||--o| icons : "has"
+
 repeat }|..|{ task_list : "belongs to"
+
 adress ||--o| user : "belongs to"
+
 category ||--o| user : "belongs to"
 category ||--o| color : "uses"
 category ||--o| icons : "uses"
 category ||--o| audio : "uses"
+
 color ||--o| user : "belongs to"
 icons ||--o| user : "belongs to"
 icons ||--o| audio : "uses"
 icons ||--o| task_list : "belongs to"
+
 audio ||--o| user : "belongs to"
+
 repeat ||--o| adress : "occurs at"
 repeat ||--o| task_list : "belongs to"
+
+options ||--o| user : "belongs to"
+
+roles ||--o| user : "belongs to"
+
+
 user {
     id UUID
     firstname string
@@ -45,12 +50,6 @@ roles {
     id UUID
     code number
     name string
-}
-
-key_cookies {
-    id UUID
-    id_user UUID
-    key string
 }
 
 key_unique {
