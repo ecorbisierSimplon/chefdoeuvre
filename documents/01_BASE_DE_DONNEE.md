@@ -25,12 +25,6 @@
 - **code (number)** : Affecte un nombre pour chaque rôle (0 visiteur à 100 pour l'administrateur)
 - **name (string)** : Nom donnée au rôle
 
-### key_cookies
-
-- **id (UUID)** : Un identifiant unique pour chaque clés de validation des cookies.
-- **id_user (UUID)** : identifiant de l'utilisateur lié à cette clé
-- **key (string)** : clé sécurisé pour une connexion automatique si l'utilisateur s'est déjà connecté une fois et a emit le souhait de rester connecté.
-
 ### key_unique
 
 - **id (UUID)** : Un identifiant unique pour chaque clés unique pour changer le mot de passe il est oublié ou pour valider une adresse email.
@@ -116,7 +110,7 @@
 - **conceptor (string)** : Le nom du concepteur de l'icone, nécessaire selon certain fournisseur d'icone.
 - **id_user (UUID)** : L'identifiant de l'utilisateur qui a ajouter une icone personnalisée et/ou utilise l'icone
 
-- ### Audio
+### Audio
 
 - **id (UUID)** : Un identifiant unique pour chaque audio
 - **name (string)** : Le nom de chaque audio

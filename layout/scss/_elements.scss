@@ -57,6 +57,77 @@ section {
   ul {
     margin: 0px;
   }
+  &.header {
+    &__no {
+      header {
+        display: none;
+      }
+      h1 {
+        display: block;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+      }
+      img:not(header img) {
+        width: 100%;
+        position: absolute;
+        left: 5px;
+        top: 5px;
+      }
+      &.two {
+        h1 {
+          left: 150px;
+          z-index: 9;
+        }
+      }
+      &.three {
+        h1 {
+          left: 150px;
+          top: auto;
+          bottom: 10px;
+          z-index: 9;
+        }
+        img:not(header img) {
+          top: -500px;
+        }
+      }
+      &.four {
+        header {
+          display: inherit;
+        }
+        h1 {
+          display: inherit;
+          position: inherit;
+          top: inherit;
+          left: inherit;
+        }
+        img:not(header img) {
+          position: relative;
+          display: block;
+          top: -5px;
+          width: 90%;
+          margin: 0 auto;
+        }
+      }
+      &.six {
+        header {
+          display: inherit;
+        }
+        h1 {
+          display: inherit;
+          position: inherit;
+          top: inherit;
+          left: inherit;
+        }
+        img:not(header img) {
+          position: relative;
+          width: 500px;
+          display: block;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
 
   &.one {
     background-image: url("https://cda.corbisier.fr/layout/img/fond_slide_1.jpg");
@@ -112,7 +183,41 @@ section {
       border-width: 0;
     }
   }
-  &.graphic_chart {
+  &.graphic_chart,
+  &.entities {
+    & > div {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      align-items: flex-start;
+      & > div {
+        width: 49%;
+        table {
+          font-family: "Amaranth", sans-serif;
+          font-size: 23px;
+          width: 100%;
+        }
+      }
+    }
+  }
+  &.entities {
+    & > div {
+      & > div {
+        table {
+          font-size: 17px;
+          width: 100%;
+          th,
+          td {
+            border-bottom: 1px solid #424242;
+            &:first-child {
+              // word-break: break-all;
+              width: 130px;
+            }
+          }
+        }
+      }
+    }
   }
 }
 

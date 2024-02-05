@@ -4,5 +4,13 @@
     "./layout/css/cda_eric.min.css"
   ],
   "markdown.marp.enableHtml": true,
-  "markdown.marp.exportType": "html"
+  "markdown.marp.exportType": "html",
+  "markdownlint.config": {
+    "MD004": false,
+    "MD024": false,
+    "MD033": false
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
