@@ -27,21 +27,13 @@ section {
     box-shadow: 2px 2px 2px 2px #797979;
   }
 
-  ol,
-  ul {
+  & > ol,
+  & > ul {
+    list-style-position: outside;
     & > li {
       font-family: "Amaranth", sans-serif;
-      font-weight: bold;
       font-size: 0.9rem;
-      text-shadow: 2px 2px 5px hsl(24, 7%, 29%);
-      // animation-duration: 3s;
-      // animation-name: slidein;
-
       & ul {
-        // list-style-type: "";
-        list-style-position: outside;
-        margin-top: -10px;
-
         & > li {
           font-weight: 400;
           font-size: 0.7rem;
@@ -51,13 +43,13 @@ section {
           }
           &::marker {
             display: inline-block;
-            font: normal normal normal 14px/1 FontAwesome;
+            font: normal normal normal 10px/1 FontAwesome;
             font-size: inherit;
             text-rendering: auto;
             -webkit-font-smoothing: antialiased;
             content: "\f017";
-            color: hsl(0, 100%, 9%);
-            margin-right: 15px;
+            color: hsl(244, 47%, 29%);
+            transform: rotateX(45deg);
           }
         }
       }
@@ -68,6 +60,22 @@ section {
   ul {
     margin: 0px;
   }
+
+  & > ul {
+    & > li {
+      &::marker {
+        display: inline-block;
+        font: normal normal normal 14px/1 FontAwesome;
+        font-size: inherit;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        content: "\f017  ";
+        color: hsla(0, 100%, 9%, 0.637);
+        text-shadow: 1px 1px 2px #9a9ba3;
+      }
+    }
+  }
+
   &.header {
     &__no {
       header {
@@ -176,7 +184,7 @@ section {
 
   &.pid {
     table {
-      max-width: calc(100% - $pid);
+      max-width: calc(100%);
     }
 
     img:not(header img) {
@@ -192,7 +200,7 @@ section {
     }
 
     td:first-child {
-      width: $pid;
+      width: 300px;
     }
   }
 

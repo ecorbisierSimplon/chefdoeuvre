@@ -61,22 +61,13 @@ I'm passionate about all things IT, especially web development.
 
 # What is **Tranquillo Organizer App**?
 
-1. Tailored for ADHD and ASD:
+- Tailored for ADHD and ASD:
 
-   - Tranquillo Organizer is designed for individuals with ADHD or ASD, addressing their unique daily organization challenges.
+- Personalized Planning Experience:
 
-2. Personalized Planning Experience:
+- Promotes Calm and Control:
 
-   - The app goes beyond traditional organizers, offering a personalized and adaptive planning experience.
-
-3. Promotes Calm and Control:
-
-   - Tranquillo fosters calm and control by helping users create structured routines, vital for those with ADHD and ASD.
-
-4. Innovative Adaptability:
-
-   - The app innovatively adapts to evolving user needs, serving as a pathway to a more organized and fulfilling life.
-     Feel free to use this shortened version to convey the main points of your presentation efficiently.
+- Innovative Adaptability:
 
 <!--# Notes:
 
