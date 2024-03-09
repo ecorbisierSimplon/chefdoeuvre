@@ -1,7 +1,8 @@
 {
   "markdown.marp.themes": [
     "https://cda.corbisier.fr/layout/css/cda_eric.min.css",
-    "./layout/css/cda_eric.min.css"
+    "./layout/css/cda_eric.min.css",
+    "./layout/css/cda_eric_two.min.css"
   ],
   "markdown.marp.enableHtml": true,
   "markdown.marp.exportType": "html",
