@@ -10,6 +10,18 @@
 
 ---
 
+- **Palette de Bleues Apaisants :**
+
+| Nom        | code couleur                                                                |
+| ---------- | --------------------------------------------------------------------------- |
+| Bleu Clair | <span style="background-color: #507599; padding: 5px 10px;" >#507599</span> |
+| Bleu Pâle  | <span style="background-color: #ABB6C8; padding: 5px 10px;" >#ABB6C8</span> |
+| Gris       | <span style="background-color: #DADADA; padding: 5px 10px;" >#DADADA</span> |
+| Jaune      | <span style="background-color: #F7F0C6; padding: 5px 10px;" >#F7F0C6</span> |
+| Gris vert  | <span style="background-color: #C2C4B6; padding: 5px 10px;" >#C2C4B6</span> |
+
+---
+
 - **Palette de Verts Naturels :**
 
 | Nom             | code couleur                                                                |
