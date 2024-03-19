@@ -17,52 +17,53 @@ date: "19-03-2024"
 
 > Entités :
 
-Users
-Roles
-Key_unique
-Options
+Utilisateurs
+Rôles
+Taches principales
+Taches Secondaire
 
 > Propriétés :
 
-**Users :**
+| **Utilisateurs** |
+| ---------------- |
+| **email**        |
+| Nom              |
+| Prénom           |
+| Mot de passe     |
+| Date de création |
+| _Roles_          |
 
-|                       |           |
-| --------------------- | --------- |
-| **email**             | (string)  |
-| firstname             | (string)  |
-| lastname              | (string)  |
-| is_email_validate     | (boolean) |
-| password              | (string)  |
-| is_password_temporary | (boolean) |
-| authentification_iam  | (string)  |
-| _Roles_               |           |
-| createdAt             | (date)    |
+---
 
-**Roles :**
+| **Roles**                    |
+| ---------------------------- |
+| **Valeur numérique du rôle** |
+| Nom de rôle                  |
 
-|          |          |
-| -------- | -------- |
-| **code** | (string) |
-| name     | (string) |
+---
 
-**Clés Uniques :**
+| **Taches principales**                                  |
+| ------------------------------------------------------- |
+| **Date de création** (date-heure-minutes-millisecondes) |
+| Nom de la tache                                         |
+| Description                                             |
+| Fréquence de répétition                                 |
+| Date de début                                           |
+| Date de fin                                             |
+| Date d'expiration                                       |
+| _Utilisateurs_                                          |
 
-|                 |            |
-| --------------- | ---------- |
-| **key**         | (UUID)     |
-| _User_          |            |
-| choice          | (number)   |
-| create_datetime | (datetime) |
+---
 
-**Options :**
+| **Taches secondaires**                                  |
+| ------------------------------------------------------- |
+| **Date de création** (date-heure-minutes-millisecondes) |
+| Nom de la tache                                         |
+| Priorité                                                |
+| _Taches principales_                                    |
+| _Utilisateurs_                                          |
 
-|                |           |
-| -------------- | --------- |
-| **id_options** |           |
-| name_option    | (string)  |
-| _User_         |           |
-| is_default     | (boolean) |
-| value_option   | (string)  |
+---
 
 > Relations :
 
