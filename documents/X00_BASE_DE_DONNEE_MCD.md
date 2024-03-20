@@ -4,113 +4,64 @@ author: "Eric CORBISIER"
 date: "19-03-2024"
 ---
 
-<style>
-.text-success{
-   color: hsl(219, 64.40%, 64.70%);
-   text-align:center;
-}
-</style>
+# Base de données
 
-# BASE DE DONNÉES {.text-success}
+<!-- TOC -->
+
+- [Base de données](#base-de-données)
+  - [MCD](#mcd)
+    - [Entités](#entités)
+    - [Propriétés](#propriétés)
+
+<!-- /TOC -->
 
 ## MCD
 
-> Entités :
+### Entités
 
-Utilisateurs
-Rôles
-Taches principales
-Taches Secondaire
+- Utilisateurs
+- Rôles
+- Taches principales
+- Taches Secondaire
 
-> Propriétés :
+### Propriétés
 
-| **Utilisateurs** |
-| ---------------- |
-| **email**        |
-| Nom              |
-| Prénom           |
-| Mot de passe     |
-| Date de création |
-| _Roles_          |
-
----
-
-| **Roles**                    |
-| ---------------------------- |
-| **Valeur numérique du rôle** |
-| Nom de rôle                  |
+| **Utilisateurs** |               |
+| ---------------- | ------------- |
+| \* email         | texte         |
+| Nom              | texte         |
+| Prénom           | texte         |
+| Mot de passe     | texte         |
+| Date de création | date et heure |
+| _Roles_          | entité        |
 
 ---
 
-| **Taches principales**                                  |
-| ------------------------------------------------------- |
-| **Date de création** (date-heure-minutes-millisecondes) |
-| Nom de la tache                                         |
-| Description                                             |
-| Fréquence de répétition                                 |
-| Date de début                                           |
-| Date de fin                                             |
-| Date d'expiration                                       |
-| _Utilisateurs_                                          |
+| **Roles**         |               |
+| ----------------- | ------------- |
+| \* Valeur du rôle | nombre entier |
+| Nom de rôle       | texte         |
 
 ---
 
-| **Taches secondaires**                                  |
-| ------------------------------------------------------- |
-| **Date de création** (date-heure-minutes-millisecondes) |
-| Nom de la tache                                         |
-| Priorité                                                |
-| _Taches principales_                                    |
-| _Utilisateurs_                                          |
+| **Taches principales**  |                                  |
+| ----------------------- | -------------------------------- |
+| \* Date de création     | date heure minutes millisecondes |
+| Nom de la tache         | texte                            |
+| Description             | texte                            |
+| Rappel avant en seconde | nombre entier                    |
+| Date de début           | date heure minutes               |
+| Date de fin             | date heure minutes               |
+| Date d'expiration       | date heure minutes               |
+| Date tache terminée     | date heure minutes               |
+| _Utilisateurs_          | Entité                           |
 
 ---
 
-> Relations :
-
-- Un utilisateur peut avoir un seul rôle, mais un rôle peut être attribué à plusieurs utilisateurs.
-  - Relation `1-N` entre Utilisateur et Rôles (User - Roles).
-- Un utilisateur peut générer plusieurs clés uniques, mais chaque clé unique est associée à un seul utilisateur.
-  - Relation `1-N` entre Utilisateur et Clés Uniques (User - Key_unique).
-- Un utilisateur peut avoir plusieurs options, mais chaque option est liée à un seul utilisateur.
-  - Relation `1-N` entre Utilisateur et Options (User - Options).
-
-Relations :
-(User) 1 ---- N (Roles)
-(User) 1 ---- N (Key_unique)
-(User) 1 ---- N (Options)
-
-```mermaid
----
-title: Tranquillo app
----
-erDiagram
-    User ||--o{ Roles : ""
-    User ||--o{ Key_unique : ""
-    User ||--o{ Options : ""
-    User {
-        string firstname
-        string lastname
-        string email
-        boolean is_email_validate
-        string password
-        boolean is_password_temporary
-        string authentification_iam
-        string createdAt
-    }
-    Roles {
-        number code
-        string name
-    }
-    Key_unique {
-        string key
-        Entitie Users
-        number choice
-        datetime create_datetime
-    }
-    Options {
-        string id_option
-        boolean is_default
-        string value
-        Entitie Users
-    }
-```
+| **Taches secondaires** |                                  |
+| ---------------------- | -------------------------------- |
+| \* Date de création    | date heure minutes millisecondes |
+| Nom de la tache        | texte                            |
+| Priorité               | nombre entier                    |
+| Date tache terminée    | date heure minutes               |
+| _Taches principales_   | Entité                           |
