@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<Database>
+   <Name>Looping tranquillo MCD</Name>
+   <Table>
+      <Name>Utilisateurs</Name>
+      <Column>
+         <Name>cl&#233;_utilisateurs</Name>
+         <Type>VARCHAR(50)</Type>
+      </Column>
+      <Column>
+         <Name>email</Name>
+         <Type>VARCHAR(200)</Type>
+         <Property>NOT NULL UNIQUE</Property>
+      </Column>
+      <Column>
+         <Name>nom</Name>
+         <Type>VARCHAR(50)</Type>
+      </Column>
+      <Column>
+         <Name>prenom</Name>
+         <Type>VARCHAR(50)</Type>
+      </Column>
+      <Column>
+         <Name>mot_de_passe</Name>
+         <Type>VARCHAR(50)</Type>
+      </Column>
+      <PK>
+         <Key>cl&#233;_utilisateurs</Key>
+      </PK>
+      <AK>
+         <Key>email</Key>
+      </AK>
+   </Table>
+   <Table>
+      <Name>Roles</Name>
+      <Column>
+         <Name>Valeur_du_role</Name>
+         <Type>VARCHAR(50)</Type>
+      </Column>
+      <Column>
+         <Name>nom_du_role</Name>
+         <Type>VARCHAR(50)</Type>
+      </Column>
+      <PK>
+         <Key>Valeur_du_role</Key>
+      </PK>
+   </Table>
+   <Table>
+      <Name>Taches_Principales</Name>
+      <Column>
+         <Name>date_et_heure_de_cr&#233;ation_de_la_tache</Name>
+         <Type>VARCHAR(50)</Type>
+      </Column>
+      <Column>
+         <Name>nom_de_la_tache</Name>
+         <Type>VARCHAR(50)</Type>
+      </Column>
+      <Column>
+         <Name>description</Name>
+         <Type>VARCHAR(50)</Type>
+      </Column>
+      <Column>
+         <Name>rappel_avant_en_secondes</Name>
+         <Type>VARCHAR(50)</Type>
+      </Column>
+      <Column>
+         <Name>date_de_d&#233;but</Name>
+         <Type>VARCHAR(50)</Type>
+      </Column>
+      <Column>
+         <Name>date_de_fin</Name>
+         <Type>VARCHAR(50)</Type>
+      </Column>
+      <Column>
+         <Name>date_d_expiration</Name>
+         <Type>VARCHAR(50)</Type>
+      </Column>
+      <Column>
+         <Name>cl&#233;_utilisateurs</Name>
+         <Type>VARCHAR(50)</Type>
+         <Property>NOT NULL</Property>
+      </Column>
+      <PK>
+         <Key>date_et_heure_de_cr&#233;ation_de_la_tache, nom_de_la_tache</Key>
+      </PK>
+      <FK>
+         <Key>cl&#233;_utilisateurs</Key>
+         <Reference>Utilisateurs(cl&#233;_utilisateurs)</Reference>
+      </FK>
+   </Table>
+   <Table>
+      <Name>Sous_taches</Name>
+      <Column>
+         <Name>date_et_heure_de_cr&#233;ation_de_la_sous_tache</Name>
+         <Type>VARCHAR(50)</Type>
+      </Column>
+      <Column>
+         <Name>nom_de_la_sous_tache</Name>
+         <Type>VARCHAR(50)</Type>
+      </Column>
+      <Column>
+         <Name>ordre</Name>
+         <Type>VARCHAR(50)</Type>
+      </Column>
+      <Column>
+         <Name>tache_termin&#233;e__oui_non_</Name>
+         <Type>VARCHAR(50)</Type>
+      </Column>
+      <Column>
+         <Name>date_et_heure_de_cr&#233;ation_de_la_tache</Name>
+         <Type>VARCHAR(50)</Type>
+         <Property>NOT NULL</Property>
+      </Column>
+      <Column>
+         <Name>nom_de_la_tache</Name>
+         <Type>VARCHAR(50)</Type>
+         <Property>NOT NULL</Property>
+      </Column>
+      <PK>
+         <Key>date_et_heure_de_cr&#233;ation_de_la_sous_tache, nom_de_la_sous_tache</Key>
+      </PK>
+      <FK>
+         <Key>date_et_heure_de_cr&#233;ation_de_la_tache, nom_de_la_tache</Key>
+         <Reference>Taches_Principales(date_et_heure_de_cr&#233;ation_de_la_tache, nom_de_la_tache)</Reference>
+      </FK>
+   </Table>
+   <Table>
+      <Name>Dispose_de_</Name>
+      <Column>
+         <Name>cl&#233;_utilisateurs</Name>
+         <Type>VARCHAR(50)</Type>
+      </Column>
+      <Column>
+         <Name>Valeur_du_role</Name>
+         <Type>VARCHAR(50)</Type>
+      </Column>
+      <PK>
+         <Key>cl&#233;_utilisateurs, Valeur_du_role</Key>
+      </PK>
+      <FK>
+         <Key>cl&#233;_utilisateurs</Key>
+         <Reference>Utilisateurs(cl&#233;_utilisateurs)</Reference>
+      </FK>
+      <FK>
+         <Key>Valeur_du_role</Key>
+         <Reference>Roles(Valeur_du_role)</Reference>
+      </FK>
+   </Table>
+</Database>
