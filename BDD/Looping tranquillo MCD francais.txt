@@ -40,7 +40,7 @@ DoCmd.RunSQL "CREATE TABLE Roles(" & _
    "UNIQUE(nom_du_role)" & _
 ");"   
 
-DoCmd.RunSQL "CREATE TABLE Asso_2(" & _
+DoCmd.RunSQL "CREATE TABLE Dispose_de_(" & _
    "Clé_utilisateur VARCHAR(255)," & _
    "Valeur_du_role INT," & _
    "PRIMARY KEY(Clé_utilisateur, Valeur_du_role)," & _
