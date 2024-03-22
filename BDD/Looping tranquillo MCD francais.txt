@@ -1,0 +1,51 @@
+Sub Create_Tables()
+
+DoCmd.RunSQL "CREATE TABLE Utilisateurs(" & _
+   "Clé_utilisateur VARCHAR(255)," & _
+   "email VARCHAR(255) NOT NULL," & _
+   "nom VARCHAR(50)," & _
+   "prénom VARCHAR(50)," & _
+   "mot_de_passe VARCHAR(50)," & _
+   "PRIMARY KEY(Clé_utilisateur)," & _
+   "UNIQUE(email)" & _
+");"   
+
+DoCmd.RunSQL "CREATE TABLE Taches_principales(" & _
+   "Date_heure_de_creation_de_la_tache DATETIME," & _
+   "nom_de_la_tache VARCHAR(50)," & _
+   "description TEXT," & _
+   "rappel_avnt_la_tache__en_seconde_ INT," & _
+   "date_de_début DATETIME," & _
+   "date_de_fin DATETIME," & _
+   "Clé_utilisateur VARCHAR(255) NOT NULL," & _
+   "PRIMARY KEY(Date_heure_de_creation_de_la_tache, nom_de_la_tache)," & _
+   "FOREIGN KEY(Clé_utilisateur) REFERENCES Utilisateurs(Clé_utilisateur)" & _
+");"   
+
+DoCmd.RunSQL "CREATE TABLE Sous_taches(" & _
+   "Date_et_heure_de_création_de_la_sous_tache DATETIME," & _
+   "nom_de_la_sous_tache VARCHAR(50)," & _
+   "ordre INT," & _
+   "tache_terminée__oui___non_ BYTE," & _
+   "Date_heure_de_creation_de_la_tache DATETIME NOT NULL," & _
+   "nom_de_la_tache VARCHAR(50) NOT NULL," & _
+   "PRIMARY KEY(Date_et_heure_de_création_de_la_sous_tache, nom_de_la_sous_tache)," & _
+   "FOREIGN KEY(Date_heure_de_creation_de_la_tache, nom_de_la_tache) REFERENCES Taches_principales(Date_heure_de_creation_de_la_tache, nom_de_la_tache)" & _
+");"   
+
+DoCmd.RunSQL "CREATE TABLE Roles(" & _
+   "Valeur_du_role INT," & _
+   "nom_du_role VARCHAR(50) NOT NULL," & _
+   "PRIMARY KEY(Valeur_du_role)," & _
+   "UNIQUE(nom_du_role)" & _
+");"   
+
+DoCmd.RunSQL "CREATE TABLE Asso_2(" & _
+   "Clé_utilisateur VARCHAR(255)," & _
+   "Valeur_du_role INT," & _
+   "PRIMARY KEY(Clé_utilisateur, Valeur_du_role)," & _
+   "FOREIGN KEY(Clé_utilisateur) REFERENCES Utilisateurs(Clé_utilisateur)," & _
+   "FOREIGN KEY(Valeur_du_role) REFERENCES Roles(Valeur_du_role)" & _
+");"   
+
+End Sub

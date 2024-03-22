@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<Database>
+   <Name>Looping tranquillo MCD francais</Name>
+   <Table>
+      <Name>Utilisateurs</Name>
+      <Column>
+         <Name>Cl&#233;_utilisateur</Name>
+         <Type>VARCHAR(255)</Type>
+      </Column>
+      <Column>
+         <Name>email</Name>
+         <Type>VARCHAR(255)</Type>
+         <Property>NOT NULL UNIQUE</Property>
+      </Column>
+      <Column>
+         <Name>nom</Name>
+         <Type>VARCHAR(50)</Type>
+      </Column>
+      <Column>
+         <Name>pr&#233;nom</Name>
+         <Type>VARCHAR(50)</Type>
+      </Column>
+      <Column>
+         <Name>mot_de_passe</Name>
+         <Type>VARCHAR(50)</Type>
+      </Column>
+      <PK>
+         <Key>Cl&#233;_utilisateur</Key>
+      </PK>
+      <AK>
+         <Key>email</Key>
+      </AK>
+   </Table>
+   <Table>
+      <Name>Taches_principales</Name>
+      <Column>
+         <Name>Date_heure_de_creation_de_la_tache</Name>
+         <Type>DATETIME</Type>
+      </Column>
+      <Column>
+         <Name>nom_de_la_tache</Name>
+         <Type>VARCHAR(50)</Type>
+      </Column>
+      <Column>
+         <Name>description</Name>
+         <Type>TEXT</Type>
+      </Column>
+      <Column>
+         <Name>rappel_avnt_la_tache__en_seconde_</Name>
+         <Type>INT</Type>
+      </Column>
+      <Column>
+         <Name>date_de_d&#233;but</Name>
+         <Type>DATETIME</Type>
+      </Column>
+      <Column>
+         <Name>date_de_fin</Name>
+         <Type>DATETIME</Type>
+      </Column>
+      <Column>
+         <Name>Cl&#233;_utilisateur</Name>
+         <Type>VARCHAR(255)</Type>
+         <Property>NOT NULL</Property>
+      </Column>
+      <PK>
+         <Key>Date_heure_de_creation_de_la_tache, nom_de_la_tache</Key>
+      </PK>
+      <FK>
+         <Key>Cl&#233;_utilisateur</Key>
+         <Reference>Utilisateurs(Cl&#233;_utilisateur)</Reference>
+      </FK>
+   </Table>
+   <Table>
+      <Name>Sous_taches</Name>
+      <Column>
+         <Name>Date_et_heure_de_cr&#233;ation_de_la_sous_tache</Name>
+         <Type>DATETIME</Type>
+      </Column>
+      <Column>
+         <Name>nom_de_la_sous_tache</Name>
+         <Type>VARCHAR(50)</Type>
+      </Column>
+      <Column>
+         <Name>ordre</Name>
+         <Type>INT</Type>
+      </Column>
+      <Column>
+         <Name>tache_termin&#233;e__oui___non_</Name>
+         <Type>BYTE</Type>
+      </Column>
+      <Column>
+         <Name>Date_heure_de_creation_de_la_tache</Name>
+         <Type>DATETIME</Type>
+         <Property>NOT NULL</Property>
+      </Column>
+      <Column>
+         <Name>nom_de_la_tache</Name>
+         <Type>VARCHAR(50)</Type>
+         <Property>NOT NULL</Property>
+      </Column>
+      <PK>
+         <Key>Date_et_heure_de_cr&#233;ation_de_la_sous_tache, nom_de_la_sous_tache</Key>
+      </PK>
+      <FK>
+         <Key>Date_heure_de_creation_de_la_tache, nom_de_la_tache</Key>
+         <Reference>Taches_principales(Date_heure_de_creation_de_la_tache, nom_de_la_tache)</Reference>
+      </FK>
+   </Table>
+   <Table>
+      <Name>Roles</Name>
+      <Column>
+         <Name>Valeur_du_role</Name>
+         <Type>INT</Type>
+      </Column>
+      <Column>
+         <Name>nom_du_role</Name>
+         <Type>VARCHAR(50)</Type>
+         <Property>NOT NULL UNIQUE</Property>
+      </Column>
+      <PK>
+         <Key>Valeur_du_role</Key>
+      </PK>
+      <AK>
+         <Key>nom_du_role</Key>
+      </AK>
+   </Table>
+   <Table>
+      <Name>Asso_2</Name>
+      <Column>
+         <Name>Cl&#233;_utilisateur</Name>
+         <Type>VARCHAR(255)</Type>
+      </Column>
+      <Column>
+         <Name>Valeur_du_role</Name>
+         <Type>INT</Type>
+      </Column>
+      <PK>
+         <Key>Cl&#233;_utilisateur, Valeur_du_role</Key>
+      </PK>
+      <FK>
+         <Key>Cl&#233;_utilisateur</Key>
+         <Reference>Utilisateurs(Cl&#233;_utilisateur)</Reference>
+      </FK>
+      <FK>
+         <Key>Valeur_du_role</Key>
+         <Reference>Roles(Valeur_du_role)</Reference>
+      </FK>
+   </Table>
+</Database>
