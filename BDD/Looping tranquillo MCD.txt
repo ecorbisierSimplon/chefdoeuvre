@@ -1,0 +1,49 @@
+Sub Create_Tables()
+
+DoCmd.RunSQL "CREATE TABLE Utilisateurs(" & _
+   "email VARCHAR(50)," & _
+   "nom VARCHAR(50)," & _
+   "prenom VARCHAR(50)," & _
+   "mot_de_passe VARCHAR(50)," & _
+   "PRIMARY KEY(email)" & _
+");"   
+
+DoCmd.RunSQL "CREATE TABLE Roles(" & _
+   "Valeur_du_role VARCHAR(50)," & _
+   "nom_du_role VARCHAR(50)," & _
+   "PRIMARY KEY(Valeur_du_role)" & _
+");"   
+
+DoCmd.RunSQL "CREATE TABLE Taches_Principales(" & _
+   "date_et_heure_de_création VARCHAR(50)," & _
+   "nom_de_la_tache VARCHAR(50)," & _
+   "description VARCHAR(50)," & _
+   "rappel_avant_en_secondes VARCHAR(50)," & _
+   "date_de_début VARCHAR(50)," & _
+   "date_de_fin VARCHAR(50)," & _
+   "date_d_expiration VARCHAR(50)," & _
+   "email VARCHAR(50) NOT NULL," & _
+   "PRIMARY KEY(date_et_heure_de_création, nom_de_la_tache)," & _
+   "FOREIGN KEY(email) REFERENCES Utilisateurs(email)" & _
+");"   
+
+DoCmd.RunSQL "CREATE TABLE Taches_secondaires(" & _
+   "date_et_heure_de_création VARCHAR(50)," & _
+   "nom_de_la_tache VARCHAR(50)," & _
+   "ordre VARCHAR(50)," & _
+   "tache_terminée__oui_non_ VARCHAR(50)," & _
+   "date_et_heure_de_création_1 VARCHAR(50) NOT NULL," & _
+   "nom_de_la_tache_1 VARCHAR(50) NOT NULL," & _
+   "PRIMARY KEY(date_et_heure_de_création, nom_de_la_tache)," & _
+   "FOREIGN KEY(date_et_heure_de_création_1, nom_de_la_tache_1) REFERENCES Taches_Principales(date_et_heure_de_création, nom_de_la_tache)" & _
+");"   
+
+DoCmd.RunSQL "CREATE TABLE Avoir(" & _
+   "email VARCHAR(50)," & _
+   "Valeur_du_role VARCHAR(50)," & _
+   "PRIMARY KEY(email, Valeur_du_role)," & _
+   "FOREIGN KEY(email) REFERENCES Utilisateurs(email)," & _
+   "FOREIGN KEY(Valeur_du_role) REFERENCES Roles(Valeur_du_role)" & _
+");"   
+
+End Sub
