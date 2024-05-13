@@ -1,0 +1,29 @@
+@use "sass:math";
+
+h1,
+h2 {
+}
+h1 {
+  color: hsl(221, 100%, 11%);
+  // background-color: #9facb6;
+  font-size: 3.4rem;
+  font-weight: 900;
+  letter-spacing: 6px;
+  padding: 0;
+  margin: 0 0 0 -50px;
+  left: -10px;
+  // padding: 0 10px 10px 10px;
+  // width: fit-content;
+  // text-wrap: nowrap;
+  // text-shadow: 0.5px 0.5px 0.5px #919191, 0.5px 1px 0.5px #919191,
+  //   0.5px 1.5px 0.5px #919191, 0.5px 2px 0.5px #919191,
+  //   0.5px 2.5px 0.5px #919191, 0.5px 3px 0.5px #919191,
+  //   0.5px 3.5px 0.5px #919191, 0.5px 4px 0.5px #919191,
+  //   0.5px 4.5px 0.5px #919191, 0.5px 5px 0.5px #919191,
+  //   0.5px 9px 3px rgba(16, 16, 16, 0.4), 0.5px 11px 5px rgba(16, 16, 16, 0.2),
+  //   0.5px 12.5px 17.5px rgba(16, 16, 16, 0.2),
+  //   0.5px 15px 30px rgba(16, 16, 16, 0.4);
+  // //  border-radius: 20px;
+  // // border: 5px solid #e6e6e6;
+  // box-shadow: 2px 2px 5px 2px #696969, 0 30px 20px -10px rgba(0, 0, 0, 0.2);
+}

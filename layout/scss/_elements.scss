@@ -1,11 +1,85 @@
 @use "sass:math";
 
+header,
+footer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: "Amaranth", sans-serif;
+
+  // width: 100vw;
+  strong {
+    color: hsl(211, 46%, 20%);
+    font-weight: 900;
+    font-size: 1.2rem;
+  }
+}
+
+header {
+  height: 80px;
+  background-image: url(https://cda.corbisier.fr/layout/img/slide/logo.png),
+    url(https://cda.corbisier.fr/layout/img/slide/logo_tranquillo_app.png);
+  background-position: left, right;
+  background-size: 60px, 25%;
+  background-repeat: no-repeat, no-repeat;
+  background-clip: content-box;
+  background-origin: content-box;
+  background-color: rgba(255, 255, 255, 0.678);
+  margin-bottom: 20px;
+  z-index: 9999;
+  background-color: hsla(0, 0%, 0%, 0);
+  box-shadow: 0 0 hsla(0, 0%, 0%, 0);
+}
+
+footer {
+  margin-top: 20px;
+}
+
+h1 {
+  color: hsl(221, 100%, 15%);
+  font-size: 1.4rem;
+  font-weight: bold;
+  width: fit-content;
+  text-wrap: nowrap;
+  text-shadow: 0.5px 0.5px 0.5px #919191, 0.5px 1px 0.5px #919191,
+    0.5px 1.5px 0.5px #919191, 0.5px 2px 0.5px #919191,
+    0.5px 2.5px 0.5px #919191, 0.5px 3px 0.5px #919191,
+    0.5px 3.5px 0.5px #919191, 0.5px 4px 0.5px #919191,
+    0.5px 4.5px 0.5px #919191, 0.5px 5px 0.5px #919191,
+    0.5px 9px 3px rgba(16, 16, 16, 0.4), 0.5px 11px 5px rgba(16, 16, 16, 0.2),
+    0.5px 12.5px 17.5px rgba(16, 16, 16, 0.2),
+    0.5px 15px 30px rgba(16, 16, 16, 0.4);
+
+  //  border-radius: 20px;
+  // border: 5px solid #e6e6e6;
+  &:not(header h1) {
+    height: 60px;
+    width: calc(100% + 25px) !important;
+    font-size: 1.3rem;
+    line-height: 60px !important;
+    // display: inline-block !important;
+    vertical-align: middle !important;
+    margin: -65px 0 0 -50px !important;
+    padding: 0 10px 10px 80px;
+    background-color: hsl(30, 50%, 85%);
+    box-shadow: 2px 2px 5px 2px #696969, 0 30px 20px -10px rgba(0, 0, 0, 0.2);
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
 section {
   transition: slide-up fade 1s;
-  background-image: url("https://cda.corbisier.fr/layout/img/fond.jpg");
+  background-image: url("https://cda.corbisier.fr/layout/img/slide/fond.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  color: hsl(211, 71%, 16%);
+  color: hsl(221, 100%, 15%);
+  font-size: 30px;
+
   &:not(.one)::before {
     background-color: hsla(0, 0%, 100%, 0.705);
     content: " ";
@@ -27,20 +101,24 @@ section {
     box-shadow: 2px 2px 2px 2px #797979;
   }
 
-  & > ol,
-  & > ul {
+  &>ol,
+  &>ul {
     list-style-position: outside;
-    & > li {
+
+    &>li {
       font-family: "Amaranth", sans-serif;
       font-size: 0.9rem;
+
       & ul {
-        & > li {
+        &>li {
           font-weight: 400;
           font-size: 0.7rem;
+
           &::before {
             margin-right: 10px;
             content: " ";
           }
+
           &::marker {
             display: inline-block;
             font: normal normal normal 10px/1 FontAwesome;
@@ -61,8 +139,9 @@ section {
     margin: 0px;
   }
 
-  & > ul {
-    & > li {
+  &>ul,
+  div>ul {
+    &>li {
       &::marker {
         display: inline-block;
         font: normal normal normal 14px/1 FontAwesome;
@@ -81,13 +160,14 @@ section {
       header {
         display: none;
       }
-      h1 {
-        display: block;
-        position: absolute;
-        top: 10px;
-        left: 10px;
-        z-index: 10;
-      }
+
+      // h1 {
+      //   display: block;
+      //   position: absolute;
+      //   top: 10px;
+      //   left: 10px;
+      //   z-index: 10;
+      // }
       img:not(header img) {
         max-width: 100%;
         max-height: 100vh;
@@ -96,38 +176,44 @@ section {
         display: block;
         // left: 5px;
         // top: -40px;
-        background-color: hsla(0, 0%, 42%, 0.445);
+        // background-color: hsla(0, 0%, 42%, 0.445);
       }
+
       &.two {
         h1 {
-          left: 150px;
+          // left: 150px;
           z-index: 9;
         }
+
         img {
           top: 10px;
         }
       }
+
       &.three {
-        h1 {
-          left: 150px;
-          top: auto;
-          bottom: 10px;
-          z-index: 9;
-        }
+
+        // h1 {
+        //   left: 150px;
+        //   top: auto;
+        //   bottom: 10px;
+        //   z-index: 9;
+        // }
         img:not(header img) {
           top: -500px;
         }
       }
+
       &.four {
         header {
           display: inherit;
         }
-        h1 {
-          display: inherit;
-          position: inherit;
-          top: inherit;
-          left: inherit;
-        }
+
+        // h1 {
+        //   display: inherit;
+        //   position: inherit;
+        //   top: inherit;
+        //   left: inherit;
+        // }
         img:not(header img) {
           position: relative;
           display: block;
@@ -136,16 +222,18 @@ section {
           margin: 0 auto;
         }
       }
+
       &.six {
         header {
           display: inherit;
         }
-        h1 {
-          display: inherit;
-          position: inherit;
-          top: inherit;
-          left: inherit;
-        }
+
+        // h1 {
+        //   display: inherit;
+        //   position: inherit;
+        //   top: inherit;
+        //   left: inherit;
+        // }
         img:not(header img) {
           position: relative;
           width: 500px;
@@ -157,7 +245,7 @@ section {
   }
 
   &.one {
-    background-image: url("https://cda.corbisier.fr/layout/img/fond_slide_1.jpg");
+    background-image: url("https://cda.corbisier.fr/layout/img/slide/fond_slide_1.jpg");
     background-color: transparent;
 
     header,
@@ -167,6 +255,13 @@ section {
 
     h1 {
       font-size: 1.8rem;
+      height: auto;
+      width: calc(100% + 25px) !important;
+      // line-height: 30px !important;
+      // display: inline-block !important;
+      vertical-align: middle !important;
+      margin-top: 20px !important;
+      padding: 10px 10px 0 10px;
     }
 
     h2 {
@@ -192,8 +287,7 @@ section {
       width: 0;
       top: -10px;
       right: -10px;
-      animation: pid_slideIn $pid_duration cubic-bezier(0.1, -0.6, 0.9, 0)
-          $pid_delay forwards,
+      animation: pid_slideIn $pid_duration cubic-bezier(0.1, -0.6, 0.9, 0) $pid_delay forwards,
         bounce $pid_duration_1 ease-in-out $pid_delay_1,
         linear_left $pid_duration_1 ease-out $pid_delay_1,
         linear_right $pid_duration_2 ease-out $pid_delay_2;
@@ -204,22 +298,83 @@ section {
     }
   }
 
+  &.qqt {
+    img:not(header img) {
+      width: 500px;
+      vertical-align: middle;
+    }
+  }
+
+  &.personas {
+
+    ol,
+    ul,
+    li,
+    table,
+    span {
+      font-size: 0.75rem;
+    }
+
+    span {
+      display: inline-block;
+      text-align: justify;
+    }
+
+    h2,
+    h3 {
+      font-size: 1rem;
+    }
+  }
+
   table {
+
     tr,
     td {
       border-width: 0;
     }
   }
+
+  &.graphic_chart {
+    position: relative;
+
+    .icons {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #2c2c2c85;
+
+      img {
+        display: block;
+        margin: 0 auto;
+        margin-top: 200px;
+        box-shadow: 4px 4px 8px 3px #000;
+      }
+
+      &.kanban {
+        img {
+          margin-top: 180px;
+          width: 90%;
+        }
+      }
+    }
+
+  }
+
   &.graphic_chart,
   &.entities {
-    & > div {
+    &>div {
       display: flex;
       flex-direction: row;
       flex-wrap: nowrap;
       justify-content: space-between;
       align-items: flex-start;
-      & > div {
+      margin-top: 15px;
+
+      &>div {
         width: 49%;
+
         table {
           font-family: "Amaranth", sans-serif;
           font-size: 23px;
@@ -228,15 +383,18 @@ section {
       }
     }
   }
+
   &.entities {
-    & > div {
-      & > div {
+    &>div {
+      &>div {
         table {
           font-size: 17px;
           width: 100%;
+
           th,
           td {
             border-bottom: 1px solid #424242;
+
             &:first-child {
               // word-break: break-all;
               width: 130px;
@@ -248,67 +406,23 @@ section {
   }
 }
 
-header,
-footer {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: center;
-  font-family: "Amaranth", sans-serif;
-
-  // width: 100vw;
-  strong {
-    color: hsl(211, 46%, 20%);
-    font-weight: 900;
-    font-size: 1.2rem;
-  }
-}
-
-header {
-  background-color: rgba(255, 255, 255, 0.678);
-  margin-bottom: 20px;
-
-  img {
-    margin-right: 20px;
-    height: 100%;
-  }
-}
-
-footer {
-  margin-top: 20px;
-}
-
-h1 {
-  color: hsl(211, 51%, 18%);
-  background-color: #9facb6;
-  font-size: 1.4rem;
+.font {
   font-weight: bold;
-  padding: 0 10px 10px 10px;
-  width: fit-content;
-  text-wrap: nowrap;
-  text-shadow: 0.5px 0.5px 0.5px #919191, 0.5px 1px 0.5px #919191,
-    0.5px 1.5px 0.5px #919191, 0.5px 2px 0.5px #919191,
-    0.5px 2.5px 0.5px #919191, 0.5px 3px 0.5px #919191,
-    0.5px 3.5px 0.5px #919191, 0.5px 4px 0.5px #919191,
-    0.5px 4.5px 0.5px #919191, 0.5px 5px 0.5px #919191,
-    0.5px 9px 3px rgba(16, 16, 16, 0.4), 0.5px 11px 5px rgba(16, 16, 16, 0.2),
-    0.5px 12.5px 17.5px rgba(16, 16, 16, 0.2),
-    0.5px 15px 30px rgba(16, 16, 16, 0.4);
-  //  border-radius: 20px;
-  // border: 5px solid #e6e6e6;
-  box-shadow: 2px 2px 5px 2px #696969, 0 30px 20px -10px rgba(0, 0, 0, 0.2);
+
+  &-amaranth {
+    font-family: "Amaranth", sans-serif;
+  }
+
+  &-salsa {
+    font-family: "Salsa", sans-serif;
+  }
 }
 
 @mixin marp-swoosh-animation($startX, $startY, $endX, $endY) {
   from {
-    transform: translate($startX, $startY) scale(0) perspective(100vw)
-      translate3d(
-        calc(var(--marp-transition-direction, 1) * $endX),
+    transform: translate($startX, $startY) scale(0) perspective(100vw) translate3d(calc(var(--marp-transition-direction, 1) * $endX),
         calc(var(--marp-transition-direction, 1) * $endY),
-        -100vw
-      )
-      rotateX(90deg) rotateZ(90deg);
+        -100vw) rotateX(90deg) rotateZ(90deg);
   }
 
   to {
@@ -326,13 +440,9 @@ h1 {
   }
 
   to {
-    transform: translate(-10vw, 0) scale(0) perspective(100vw)
-      translate3d(
-        calc(var(--marp-transition-direction, 1) * 100%),
+    transform: translate(-10vw, 0) scale(0) perspective(100vw) translate3d(calc(var(--marp-transition-direction, 1) * 100%),
         -100vh,
-        -100vw
-      )
-      rotateX(00deg) rotateZ(00deg);
+        -100vw) rotateX(00deg) rotateZ(00deg);
   }
 }
 
@@ -363,12 +473,14 @@ h1 {
     $percent: $i * 10%;
     $pixel: 250px;
 
-    $result: (((($pixel * -1) +1) / 9 * ($i - 1)) + $pixel);
+    $result: (
+      ((($pixel * -1) +1) / 9 * ($i - 1)) + $pixel
+    );
 
-    #{$percent - 5%} {
-      top: calc($pid_top - $result);
-    }
+  #{$percent - 5%} {
+    top: calc($pid_top - $result);
   }
+}
 }
 
 @keyframes linear_left {
