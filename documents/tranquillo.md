@@ -4,7 +4,7 @@ theme: cda_eric
 paginate: true
 _paginate: false # or use `_paginate: skip`
 header: " "
-transition: swoosh
+transition: dissolve
 footer: ""
 ---
 
@@ -14,7 +14,7 @@ footer: ""
 
 # ![Tranquillo](https://cda.corbisier.fr/layout/img/slide/logo_tranquillo_app.png)
 
-<!-- # ![](https://cda.corbisier.fr/layout/img/slide/logo_tranquillo_app.png) -->
+<!-- ![](https://cda.corbisier.fr/layout/img/slide/logo_tranquillo_app.png) -->
 
 ## CDA Simplon 2024
 
@@ -34,7 +34,7 @@ Thank you for welcoming me to introduce my masterpiece, the Tranquillo Organizer
 
 # Qui suis-je ?
 
-![image right:40% 50%](https://cda.corbisier.fr/layout/img/slide/pid.png)
+
 
 **Eric CORBISIER**
 |                     |     |                                                                                  |
@@ -44,9 +44,19 @@ Thank you for welcoming me to introduce my masterpiece, the Tranquillo Organizer
 | **Loisirs**         | :   | Bricolage, cyclisme                                                              |
 | **Passion**         | :   | Développement Web                                                                |
 
-<!--# remarque :
+<!--# Note :
+Why CDA ?
 
-Pourquoi le CDA
+Let me begin by introducing myself: my name is Eric Corbisier.
+
+My age, let's just say, is a number that no longer rolls off the tongue.
+
+Over the years, I've worked as an apprentice, a letter carrier, then as an alarm technician, and finally as an electrical safety trainer.
+
+I love DIY and cycling adventures.
+
+I'm passionate about all things IT, especially web development.
+Since I was 15, I've been developing ms-dos, my calculator, small software programs and now websites, which logically leads me to become a professional in application design and development.
 
 -->
 
@@ -173,8 +183,11 @@ tenir compte de l'utilisateur connecté
 </div>
 </div>
 
-<!-- Notes
-productonor -> client
+<!--# Notes
+product owner -> client
+
+Github Work Fload
+Issue -> ticket
 
 -->
 
@@ -207,8 +220,10 @@ tenir compte de l'utilisateur connecté
 </div>
 </div>
 
-<!-- Notes
-productonor -> client
+<!--# Notes
+product Owner -> client
+
+3 taches ; taches en cours ; test ;
 
 -->
 
@@ -247,9 +262,52 @@ tenir compte de l'utilisateur connecté
 </div>
 </div>
 
-<!-- Notes
+<!--# Notes
 productonor -> client
 
+-->
+
+---
+
+<!-- _class: graphic_chart -->
+
+# Les Outils
+
+<div>
+<div>
+
+## Github
+
+- définir les besoins
+- définir les fonctionnalités
+    (modification d'une tâche)
+
+tenir compte de l'utilisateur connecté
+
+- que veut le client
+- quels sont ses droits
+
+</div>
+
+<div>
+
+## Kanban
+
+<div class="icons kanban">
+
+![image](https://cda.corbisier.fr/layout/img/slide/kanban2.png)
+
+</div>
+
+</div>
+</div>
+
+<!--# Notes
+productonor -> client
+
+développer -> tester -> déployer
+
+CONCEPTION ==> 
 -->
 
 ---
@@ -379,17 +437,36 @@ material-design-iconic-font :
 
 <!--# Notes :
 
+STATIC : UNIQUEMENT UN RENDU FIDÈLE, RESPONSIVE
+15MN 
+
  -->
 
 ---
 
 <!-- _class: entities -->
 
-# Définitions des entités
+# Base de Données
+
+## **Merise**
+
+**3 étapes dans la conception et modélisation des données**
+
+    MODÈLE
+
+1. conceptuel
+2. logique
+3. physique
 
 <!--# NOTES:
-Merise :
+Modélisation des données
+Expression de besoin
 
+Merise :
+3 étapes dans la conception et modélisation des données :
+1. modèle conceptuel
+2. modèle logique
+3. modèle physique (pour construire le schéma de la base de données)
 
 -->
 
@@ -397,113 +474,145 @@ Merise :
 
 <!-- _class: entities -->
 
-# Entities Definitions
+# BDD : Merise - Modèle Conceptuel des Données
+
+![image](https://cda.corbisier.fr/layout/img/slide/tranquillo_MConceptuelD_francais.png)
 
 <!--# NOTES :
-### Les rôles
+### DISCRIMINANT
 
-### clé_unique
-Ce tableau gère les clés uniques pour des actions telles que la réinitialisation du mot de passe ou la validation des e-mails.
+lien sémantique -> cardinalité
+
+
  -->
 
 ---
 
 <!-- _class: entities -->
 
-# Entities Definitions
+# BDD : Merise - Modèle Logique des Données
 
+![image](https://cda.corbisier.fr/layout/img/slide/tranquillo_MLogiqueD_francais.png)
 
----
+<!--# NOTES :
 
-<!-- _class: header__no -->
+ENTITÉS       => TABLES
+PROPRIÉTÉS    => COLONNES
+DISCRIMINANTS => CLÉS PRIMAIRES
 
-# Diagram tables
+les noms respectent l'unicité et convention de nommage mais avec des thermes plus techniques
 
-![image](https://cda.corbisier.fr/layout/img/ergiagram.svg)
+Ajout des clés étrangères :
 
-<!--# Notes :
-
-The database encourages interaction between entities.
-Let's look at the diagram.
-We have a simplified diagram.
-
--->
-
----
-
-<!-- _class: header__no -->
-
-# Diagram tables
-
-![image](https://cda.corbisier.fr/layout/img/ergiagram_mini.svg)
-
-<!--# Notes :
-
-For example, a user creates a task in the task_list table.
-When he creates reminders, these are recorded in the repeat table, which is linked to both the task_list table and the user table.
-
-Roles (table roles) assigned to each user enable access rights to be defined, thus guaranteeing appropriate security of the security system.
-
-Keys (key_unique) are used to securely manage sensitive operations such as password changes, and are linked to the `user` table.
-
--->
-
----
-
-<!-- _class: img_two-->
-
-# User
-
-![image](https://cda.corbisier.fr/layout/img/sequence_user_1.svg)
-
-<!--# Notes:
-
-1. User Initiates Account Creation
-The user decides to create an account, initiating the process through the user interface.
-
-2. Email Existence Check
-The server checks if the provided email already exists, preventing duplicate accounts.
-
--->
-
----
-
-<!-- _class: img_two-->
-
-# User
-
-![image](https://cda.corbisier.fr/layout/img/sequence_user_2.svg)
-
-<!--# Notes:
-
-3. Unique Email Confirmation
-Upon confirming the email is unique, the server securely creates a new account, hashes the password, generates a confirmation key, and notifies the user.
-
--->
-
----
-
-<!-- _class: img_two-->
-
-# User
-
-![image](https://cda.corbisier.fr/layout/img/sequence_user_3.svg)
-
-<!--# Notes :
-
-4. Email Validation
-The system validates the user's email, notifying the user of successful account activation and instructing them to await further instructions.
-
-5. Reminder for Unvalidated Email
-If the email remains unvalidated, a reminder email is sent to prompt the user.
-
-6. Email Validation Check after Reminder
-The system checks if the user validated their email after the reminder, handling consequences based on the timeframe.
-
-7. Final Consequences
-Depending on email validation within the specified timeframe, the account remains active or is marked as inactive if validation doesn't occur.
-
+Contrainte qui garantit l'intégrité référentielle généralement entre deux tables
  -->
+
+---
+
+<!-- _class: graphic_chart  -->
+
+# BDD : Merise - Modèle Physique de Données
+
+```sql
+"CREATE TABLE tpa_users(
+    email VARCHAR(180),
+    lastname VARCHAR(50),
+    firstname VARCHAR(50),
+    user_password VARCHAR(50),
+    user_role VARCHAR(50),
+    user_create_at DATETIME NOT NULL,
+    PRIMARY KEY(email)
+);"
+```
+
+```sql
+"CREATE TABLE tpa_tasks(
+   task_create_at DATETIME,
+   task_name VARCHAR(50),
+   task_description TEXT,
+   task_reminder INT,
+   task_start_at DATETIME,
+   task_end_at DATETIME,
+   email VARCHAR(180) NOT NULL,
+   PRIMARY KEY(task_create_at, task_name),
+   FOREIGN KEY(email) REFERENCES tpa_sers(email)
+);"
+```
+
+---
+
+<!-- _class: entities bdd-->
+
+# Sécurité
+
+![image](https://cda.corbisier.fr/layout/img/slide/bdd_user.png)
+
+<!--# Notes
+ fixtures 
+ -->
+
+---
+
+<!-- _class: entities dto-->
+
+# Sécurité
+
+![image](https://cda.corbisier.fr/layout/img/slide/dto_user.png)
+
+---
+
+<!-- _class: entities sequence-->
+
+# Diagramme de séquences
+
+![Diagramme de séquences](https://cda.corbisier.fr/layout/img/slide/tranquillo_sequence_vpd.png)
+
+---
+
+<!-- _class: graphic_chart -->
+
+# Choix des languages
+
+<div>
+<div>
+
+## **Front :**
+
+![logo](https://svelte-native.technology/logos_combined.svg)
+
+- SvelteNative
+- NativeScript
+- Typescript
+
+</div>
+<div class="back">
+
+## **Back :**
+
+![symfony](https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Symfony2.svg/800px-Symfony2.svg.png
+)
+![php](https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/2560px-PHP-logo.svg.png)
+![mariadb](https://mariadb.com/wp-content/uploads/2019/11/mariadb-logo-vert_blue-transparent.png)
+
+</div>
+
+---
+
+<!-- _class: entities -->
+
+# Diagramme de classes
+
+![image](https://cda.corbisier.fr/layout/img/slide/tranquillo_class_vpd.png)
+
+<!--# Notes:
+ le mot-clé static signifie que la fonction renverra une instance de la classe sur laquelle la méthode a été appelée, 
+ plutôt que de renvoyer une instance de la classe dans laquelle la méthode est définie. 
+
+ Si nous appelons setName sur une instance de MaSousClasse, 
+ cela renverra toujours une instance de MaSousClasse, pas de MaClasse, grâce à l'utilisation de static. 
+ -->
+
+---
 
 <!-- _class: header__no six-->
 

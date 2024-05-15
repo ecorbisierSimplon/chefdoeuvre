@@ -1,0 +1,36 @@
+Sub Create_Tables()
+
+DoCmd.RunSQL "CREATE TABLE tpa_sers(" & _
+   "email VARCHAR(180)," & _
+   "lastname VARCHAR(50)," & _
+   "firstname VARCHAR(50)," & _
+   "user_password VARCHAR(50)," & _
+   "user_role VARCHAR(50)," & _
+   "user_create_at DATETIME NOT NULL," & _
+   "PRIMARY KEY(email)" & _
+");"   
+
+DoCmd.RunSQL "CREATE TABLE tpa_tasks(" & _
+   "task_create_at DATETIME," & _
+   "task_name VARCHAR(50)," & _
+   "task_description TEXT," & _
+   "task_reminder INT," & _
+   "task_start_at DATETIME," & _
+   "task_end_at DATETIME," & _
+   "email VARCHAR(180) NOT NULL," & _
+   "PRIMARY KEY(task_create_at, task_name)," & _
+   "FOREIGN KEY(email) REFERENCES tpa_sers(email)" & _
+");"   
+
+DoCmd.RunSQL "CREATE TABLE tpa_subtasks(" & _
+   "subtask_create_at DATETIME," & _
+   "subtask_name VARCHAR(50)," & _
+   "subtask_order INT," & _
+   "subtask_is_finished BYTE," & _
+   "task_create_at DATETIME NOT NULL," & _
+   "task_name VARCHAR(50) NOT NULL," & _
+   "PRIMARY KEY(subtask_create_at, subtask_name)," & _
+   "FOREIGN KEY(task_create_at, task_name) REFERENCES tpa_tasks(task_create_at, task_name)" & _
+");"   
+
+End Sub
