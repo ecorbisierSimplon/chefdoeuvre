@@ -1,6 +1,6 @@
 ---
 marp: true
-theme: cda_eric
+theme: cda_eric_tranquillo
 paginate: true
 _paginate: false # or use `_paginate: skip`
 header: " "
@@ -8,11 +8,11 @@ transition: dissolve
 footer: ""
 ---
 
-<!-- _class: one -->
+<!-- _class: slide__intro  h1_no-->
 
 ![bg left:30% 80%](https://cda.corbisier.fr/layout/img/slide/logo.webp)
 
-# ![Tranquillo](https://cda.corbisier.fr/layout/img/slide/logo_tranquillo_app.png)
+# ![Tranquillo Organizer](https://cda.corbisier.fr/layout/img/slide/logo_tranquillo_app_6.png)
 
 <!-- ![](https://cda.corbisier.fr/layout/img/slide/logo_tranquillo_app.png) -->
 
@@ -30,19 +30,23 @@ Thank you for welcoming me to introduce my masterpiece, the Tranquillo Organizer
 
 ---
 
-<!-- _class: pid -->
+<!-- _class: slide__presentation  -->
 
 # Qui suis-je ?
 
 
 
-**Eric CORBISIER**
-|                     |     |                                                                                  |
-| ------------------- | --- | -------------------------------------------------------------------------------- |
-| **Âge**             | :   | Un secret bien gardé                                                             |
-| **Carrière variée** | :   | Facteur, support technique en système d'alarme, formateur en sécurité électrique |
-| **Loisirs**         | :   | Bricolage, cyclisme                                                              |
-| **Passion**         | :   | Développement Web                                                                |
+## **Eric CORBISIER**
+|                                                                                  |
+| -------------------------------------------------------------------------------- |
+| **Âge**                                                                          |
+| Un secret bien gardé                                                             |
+| **Carrières**                                                                    |
+| Facteur, support technique en système d'alarme, formateur en sécurité électrique |
+| **Loisirs**                                                                      |
+| Bricolage, cyclisme                                                              |
+| **Passion**                                                                      |
+| Développement Web                                                                |
 
 <!--# Note :
 Why CDA ?
@@ -70,13 +74,13 @@ Since I was 15, I've been developing ms-dos, my calculator, small software progr
 
 # Mon projet : Pourqui et Pourquoi ?
 
--Adapté au TDAH et au TSA :
+- Adapté au TDAH et au TSA
 
--Expérience de planification personnalisée
+- Expérience de planification personnalisée
 
--Favorise le calme et le contrôle
+- Favorise le calme et le contrôle
 
--Adaptabilité innovante
+- Adaptabilité innovante
 
 <!--# Notes:
 
@@ -128,7 +132,7 @@ CONTEXTE DE L'APPLICATION
 
 ---
 
-<!-- _class: graphic_chart -->
+<!-- _class: slide__colonnes -->
 
 # Mon projet
 
@@ -162,7 +166,7 @@ CONTEXTE DE L'APPLICATION
 
 ---
 
-<!-- _class: graphic_chart -->
+<!-- _class: slide__colonnes -->
 
 # Les Outils
 
@@ -193,7 +197,7 @@ Issue -> ticket
 
 ---
 
-<!-- _class: graphic_chart -->
+<!-- _class: slide__colonnes -->
 
 # Les Outils
 
@@ -229,7 +233,7 @@ product Owner -> client
 
 ---
 
-<!-- _class: graphic_chart -->
+<!-- _class: slide__colonnes -->
 
 # Les Outils
 
@@ -269,7 +273,7 @@ productonor -> client
 
 ---
 
-<!-- _class: graphic_chart -->
+<!-- _class: slide__colonnes -->
 
 # Les Outils
 
@@ -312,7 +316,7 @@ CONCEPTION ==>
 
 ---
 
-<!-- _class: header__no four-->
+<!-- _class: slide__image--100 -->
 
 # Zoning
 
@@ -324,7 +328,7 @@ CONCEPTION ==>
 
 ---
 
-<!-- _class: header__no four-->
+<!-- _class: slide__image--100 -->
 
 # Wireframe
 
@@ -332,7 +336,7 @@ CONCEPTION ==>
 
 ---
 
-<!-- _class: graphic_chart -->
+<!-- _class: slide__colonnes -->
 
 # Charte graphique
 
@@ -378,7 +382,7 @@ material-design-iconic-font :
 
 ---
 
-<!-- _class: graphic_chart -->
+<!-- _class: slide__colonnes -->
 
 # Charte graphique
 
@@ -429,7 +433,7 @@ material-design-iconic-font :
 
 ---
 
-<!-- _class: header__no four-->
+<!-- _class: slide__image--100 -->
 
 # Maquette Static
 
@@ -472,7 +476,7 @@ Merise :
 
 ---
 
-<!-- _class: entities -->
+<!-- _class: slide__image--100  -->
 
 # BDD : Merise - Modèle Conceptuel des Données
 
@@ -488,7 +492,7 @@ lien sémantique -> cardinalité
 
 ---
 
-<!-- _class: entities -->
+<!-- _class: slide__image--100  -->
 
 # BDD : Merise - Modèle Logique des Données
 
@@ -509,7 +513,7 @@ Contrainte qui garantit l'intégrité référentielle généralement entre deux 
 
 ---
 
-<!-- _class: graphic_chart  -->
+<!-- _class: slide__colonnes  -->
 
 # BDD : Merise - Modèle Physique de Données
 
@@ -541,7 +545,7 @@ Contrainte qui garantit l'intégrité référentielle généralement entre deux 
 
 ---
 
-<!-- _class: entities bdd-->
+<!-- _class: slide__image--100  bdd-->
 
 # Sécurité
 
@@ -553,7 +557,7 @@ Contrainte qui garantit l'intégrité référentielle généralement entre deux 
 
 ---
 
-<!-- _class: entities dto-->
+<!-- _class: slide__image--100  dto-->
 
 # Sécurité
 
@@ -561,7 +565,7 @@ Contrainte qui garantit l'intégrité référentielle généralement entre deux 
 
 ---
 
-<!-- _class: entities sequence-->
+<!-- _class: slide__image--100  dto-->
 
 # Diagramme de séquences
 
@@ -569,7 +573,7 @@ Contrainte qui garantit l'intégrité référentielle généralement entre deux 
 
 ---
 
-<!-- _class: graphic_chart -->
+<!-- _class: slide__colonnes -->
 
 # Choix des languages
 
@@ -592,7 +596,7 @@ Contrainte qui garantit l'intégrité référentielle généralement entre deux 
 ![symfony](https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Symfony2.svg/800px-Symfony2.svg.png
 )
 ![php](https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/2560px-PHP-logo.svg.png)
-![mariadb](https://mariadb.com/wp-content/uploads/2019/11/mariadb-logo-vert_blue-transparent.png)
+![Mariadb](https://mariadb.com/wp-content/uploads/2019/11/mariadb-logo-vert_blue-transparent.png)
 
 </div>
 

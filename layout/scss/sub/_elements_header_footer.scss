@@ -1,0 +1,83 @@
+@use "sass:math";
+
+header,
+footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: "Amaranth", sans-serif;
+
+    // width: 100vw;
+    strong {
+        color: hsl($code_color_primary, 46%, 20%);
+        font-weight: 900;
+        font-size: 1.2rem;
+    }
+}
+
+header {
+    height: 100px;
+    background-image: url(https://cda.corbisier.fr/layout/img/slide/logo.png),
+        url(https://cda.corbisier.fr/layout/img/slide/logo_tranquillo_app_6.png);
+    background-position: left center, right center;
+    background-size: 65px, auto 98%;
+    background-position-y: 5px, 1px;
+    background-repeat: no-repeat, no-repeat;
+    background-clip: content-box;
+    background-origin: content-box;
+    background-color: rgba(255, 255, 255, 0.678);
+    padding: 10px 15px 0px;
+    margin-bottom: 20px;
+    z-index: 9999;
+    background-color: hsla(0, 0%, 0%, 0);
+    box-shadow: 0 0 hsla(0, 0%, 0%, 0);
+
+
+}
+
+h1 {
+    color: $color-primary2;
+    font-weight: bold;
+    width: fit-content;
+    text-wrap: nowrap;
+    text-shadow:
+        0.25px 0.25px 0.5px hsl(0, 0%, 85%),
+        0.75px 0.75px 0.5px hsl(0, 0%, 80%),
+        1.00px 0.50px 0.5px hsl(0, 0%, 75%),
+        1.25px 1.00px 0.5px hsl(0, 0%, 71%),
+        1.50px 1.50px 0.5px hsl(0, 0%, 67%),
+        1.75px 2.00px 0.5px hsl(0, 0%, 64%),
+        2.00px 2.50px 0.5px hsl(0, 0%, 61%),
+        2.25px 3.00px 0.5px hsl(0, 0%, 58%),
+        2.50px 3.50px 0.5px hsl(0, 0%, 56%),
+        2.75px 4.00px 0.5px hsl(0, 0%, 55%),
+        3.00px 4.00px 4.0px hsl(0, 0%, 55%),
+        3.00px 4.50px 5.0px hsl(0, 0%, 55%),
+        3.50px 5.00px 8.0px hsl(0, 0%, 55%),
+        4.00px 5.50px 8.0px hsl(0, 0%, 15%);
+
+    border-radius: 20px;
+    border: 5px solid #e6e6e6;
+
+    &:not(.h1_no h1) {
+        height: 60px;
+        width: calc(100% + 25px) !important;
+        line-height: 60px !important;
+        // display: inline-block !important;
+        vertical-align: middle !important;
+        margin: -65px 0 0 -62px !important;
+        padding: 0 10px 10px 80px;
+        background-color: hsl(30, 50%, 85%);
+        box-shadow: 2px 2px 5px 2px hsl(0, 0%, 41%), 0 30px 20px -10px hsla(0, 0%, 0%, 0.2);
+    }
+
+    img {
+        width: 100%;
+    }
+}
+
+footer {
+    margin-top: 20px;
+}

@@ -1,0 +1,119 @@
+section {
+    font-size: 25px;
+    color: $color-primary;
+    transition: slide-up fade 0.5s;
+    background-image: url("https://cda.corbisier.fr/layout/img/slide/fond.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+    &:not(.slide__intro)::before {
+        background-color: hsla(0, 0%, 100%, 0.493);
+        content: " ";
+        top: 0;
+        left: 0;
+        display: block;
+        height: 100%;
+        position: absolute;
+        width: 100%;
+        z-index: -1;
+    }
+
+    &::after {
+        font-family: "Amaranth", sans-serif;
+        font-weight: bold;
+        background-color: hsla(211, 40%, 66%, 0.5);
+        margin: 10px;
+        border-radius: 20px 10px;
+        box-shadow: 2px 2px 2px 2px #797979;
+    }
+
+    pre {
+        font-size: 20px;
+        white-space: break-spaces;
+        padding: 20px 50px;
+    }
+
+    &>ol,
+    &>ul {
+        list-style-position: outside;
+
+        &>li {
+            font-family: "Amaranth", sans-serif;
+            font-size: 0.9rem;
+
+            & ul {
+                &>li {
+                    font-weight: 400;
+                    font-size: 0.7rem;
+
+                    &::before {
+                        margin-right: 10px;
+                        content: " ";
+                    }
+
+                    &::marker {
+                        display: inline-block;
+                        font: normal normal normal 10px/1 FontAwesome;
+                        font-size: inherit;
+                        text-rendering: auto;
+                        -webkit-font-smoothing: antialiased;
+                        content: "\f017";
+                        color: hsl(244, 47%, 29%);
+                        transform: rotateX(45deg);
+                    }
+                }
+            }
+        }
+    }
+
+    ol,
+    ul {
+        margin: 0px;
+    }
+
+    &>ul,
+    div>ul {
+        margin-left: 20px;
+
+        &>li {
+            &::marker {
+                display: inline-block;
+                font: normal normal normal 14px/1 FontAwesome;
+                font-size: 20px;
+                text-rendering: auto;
+                -webkit-font-smoothing: antialiased;
+                content: "\f274   ";
+                color: hsla(0, 100%, 9%, 0.637);
+                text-shadow: 1px 1px 2px #9a9ba3;
+            }
+
+            &>ul {
+                &>li {
+                    &::marker {
+                        display: inline-block;
+                        font: normal normal normal 14px/1 FontAwesome;
+                        font-size: 18px;
+                        text-rendering: auto;
+                        -webkit-font-smoothing: antialiased;
+                        content: "\f017   ";
+                        color: hsla(0, 100%, 9%, 0.637);
+                        text-shadow: 1px 1px 2px #9a9ba3;
+                    }
+                }
+            }
+        }
+    }
+}
+
+table {
+    display: inline-block;
+    background-color: #fff;
+    box-shadow: 3px 3px 6px #000000;
+
+    td,
+    tr {
+        border-width: 0px;
+        width: min-content;
+    }
+}

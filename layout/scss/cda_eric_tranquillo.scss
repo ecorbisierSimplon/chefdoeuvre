@@ -1,0 +1,19 @@
+/*!
+* Marp / Marpit Gaia theme.
+*
+* @theme cda_eric_tranquillo
+* @author Eric CORBISIER
+*
+* @auto-scaling true
+* @size 16:9 1280px 720px
+* @size 4:3 960px 720px
+* @import 'default'
+*/
+@charset "UTF-8";
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+@import "./sub/variables";
+@import "./sub/gaia";
+@import "./sub/elements_fonts";
+@import "./sub/elements_base";
+@import "./sub/elements_header_footer";
+@import "./sub/elements_tranquillo";
