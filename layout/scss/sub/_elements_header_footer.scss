@@ -22,8 +22,8 @@ header {
     background-image: url(https://cda.corbisier.fr/layout/img/slide/logo.png),
         url(https://cda.corbisier.fr/layout/img/slide/logo_tranquillo_app_6.png);
     background-position: left center, right center;
-    background-size: 65px, auto 98%;
-    background-position-y: 5px, 1px;
+    background-size: 65px, auto 70%;
+    background-position-y: 5px, 5px;
     background-repeat: no-repeat, no-repeat;
     background-clip: content-box;
     background-origin: content-box;
@@ -37,7 +37,7 @@ header {
 
 }
 
-h1 {
+h1:not(.slide__title h1) {
     color: $color-primary2;
     font-weight: bold;
     width: fit-content;
@@ -61,7 +61,7 @@ h1 {
     border-radius: 20px;
     border: 5px solid #e6e6e6;
 
-    &:not(.h1_no h1) {
+    &:not(.h1_no h1):not(.slide__image--arborescence h1) {
         height: 60px;
         width: calc(100% + 25px) !important;
         line-height: 60px !important;
@@ -79,5 +79,28 @@ h1 {
 }
 
 footer {
-    margin-top: 20px;
+    // margin-top: 20px;
+    height: 0;
+    padding: 0;
+    margin: 0;
+}
+
+h7 {
+    display: block;
+    position: absolute;
+    left: 15px;
+    bottom: 5px;
+    font-family: "Salsa", sans-serif;
+    font-size: 25px;
+    z-index: 99;
+    background-color: hsla(211, 81%, 94%, 0.877);
+    padding: 2px 10px;
+    border-radius: 20px 5px;
+
+    &::first-letter {
+        font-family: "Salsa", sans-serif;
+        color: #fd8207;
+
+    }
+
 }

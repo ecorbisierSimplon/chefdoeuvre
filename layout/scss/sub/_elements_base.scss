@@ -1,14 +1,14 @@
 section {
     font-size: 25px;
     color: $color-primary;
-    transition: slide-up fade 0.5s;
+    transition: slide-up fade 0.2s;
     background-image: url("https://cda.corbisier.fr/layout/img/slide/fond.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 
 
-    &:not(.slide__intro)::before {
-        background-color: hsla(0, 0%, 100%, 0.493);
+    &::before {
+        background-color: hsla(0, 0%, 100%, 0.7);
         content: " ";
         top: 0;
         left: 0;
@@ -16,17 +16,22 @@ section {
         height: 100%;
         position: absolute;
         width: 100%;
-        z-index: -1;
+        z-index: -10;
     }
 
     &::after {
         font-family: "Amaranth", sans-serif;
         font-weight: bold;
-        background-color: hsla(211, 40%, 66%, 0.5);
+        font-size: 1.5rem;
+        height: auto;
+        background-color: hsla(212, 78%, 86%, 0.822);
         margin: 10px;
+        padding: 0px 20px !important;
         border-radius: 20px 10px;
         box-shadow: 2px 2px 2px 2px #797979;
+        z-index: 999;
     }
+
 
     pre {
         font-size: 20px;
@@ -34,13 +39,24 @@ section {
         padding: 20px 50px;
     }
 
-    &>ol,
-    &>ul {
+    code {
+        font-size: 1.2rem;
+        font-weight: bold;
+        padding: 2px 15px;
+    }
+
+    ol,
+    ul {
         list-style-position: outside;
 
         &>li {
-            font-family: "Amaranth", sans-serif;
-            font-size: 0.9rem;
+            &:first-child {
+                margin-top: 5px;
+            }
+
+            font-family: "Amaranth",
+            sans-serif;
+            font-size: 1.2rem;
 
             & ul {
                 &>li {
@@ -104,6 +120,23 @@ section {
             }
         }
     }
+
+}
+
+.abs {
+    position: absolute;
+}
+
+.rel {
+    position: relative;
+}
+
+.oval {
+    width: 120px;
+    height: 50px;
+    border: 2px solid #f55757;
+    border-radius: 12px / 24px;
+    box-shadow: 2px 2px 5px #000, INSET 2px 2px 5px #000;
 }
 
 table {
@@ -115,5 +148,15 @@ table {
     tr {
         border-width: 0px;
         width: min-content;
+    }
+}
+
+@keyframes marp-transition-dissolve {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
     }
 }
