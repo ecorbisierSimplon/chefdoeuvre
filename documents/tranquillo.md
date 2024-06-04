@@ -1093,9 +1093,9 @@ La clé secondaire garde sont rôle unicité
 
 <img src="https://cda.corbisier.fr/layout/img/dossiers/BDD_tasks _colonnes.png" class="first" alt="mariaDB">
 
-<img src="https://cda.corbisier.fr/layout/img/slide/BDD_tasks _index_1_min.png" class="abs index index--1" alt="mariaDB">
+<img src="https://cda.corbisier.fr/layout/img/dossiers/BDD_tasks _index.png" class="abs index index--1" alt="mariaDB">
 
-<img src="https://cda.corbisier.fr/layout/img/slide/BDD_tasks _index_2_min.png" class="abs index index--2" alt="mariaDB">
+<!-- <img src="https://cda.corbisier.fr/layout/img/slide/BDD_tasks _index_2_min.png" class="abs index index--2" alt="mariaDB"> -->
 
 <h7>Les Données</h7>
 

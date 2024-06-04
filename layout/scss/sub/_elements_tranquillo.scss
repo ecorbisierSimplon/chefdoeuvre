@@ -441,20 +441,16 @@ section {
 
 
                 &.index {
-                    // height: 200%;
-                    // width: 160%;
+
                     position: absolute;
                     margin: 0;
 
                     &--1 {
-                        top: -50px;
-                        // left: -100px;
+                        top: 100px;
                         z-index: -1;
                     }
 
                     &--2 {
-                        // left: auto;
-                        // right: -500px;
                         top: 200px;
                         z-index: -2;
                     }
